@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nithish Kumar - Data Analytics, Power BI, Excel VBA, Banking and Payment Operations Portfolio">
+  <title>Nithish Kumar | Data Analytics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">NK<span>.</span></a>
+      <nav id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">DATA ANALYTICS • POWER BI • BANKING OPERATIONS</p>
+          <h1>Hi, I'm <span id="heroName">Nithish Kumar</span></h1>
+          <h2 id="heroTitle">Data Analytics &amp; Banking Operations Professional</h2>
+          <p class="hero-description" id="heroDescription">
+            I transform business and operational data into meaningful insights using Power BI, DAX, Excel, VBA automation and data analysis.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">View My Projects →</a>
+            <a id="resumeLink" href="assets/resume.pdf" class="btn secondary-btn" download>Download Resume</a>
+          </div>
+          <div class="social-links">
+            <a id="linkedinLink" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a id="githubLink" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a id="emailLink" href="#">Email</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img id="profileImage" class="profile-photo" src="assets/profile.jpg" alt="Nithish Kumar">
+          <div class="profile-fallback" id="profileFallback">NK</div>
+          <div class="hero-card-content">
+            <h3 id="cardName">Nithish Kumar</h3>
+            <p>Power BI • Excel • DAX • VBA • Banking</p>
+          </div>
+          <div class="floating-card card-one"><strong>15+</strong><span>Analytics Projects</span></div>
+          <div class="floating-card card-two"><strong>Power BI</strong><span>Dashboard Development</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">ABOUT ME</p>
+          <h2>Turning Data Into Business Insights</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a banking and operations professional with a strong interest in Data Analytics, Business Intelligence and process automation.</p>
+            <p>My experience includes banking operations, payment operations, merchant onboarding, KYC-related processes, reporting, reconciliation and operational data analysis.</p>
+            <p>Alongside my professional experience, I have developed multiple analytical dashboards using Power BI, DAX and Excel. I also use VBA automation to reduce repetitive manual reporting activities.</p>
+            <p>My goal is to combine domain knowledge with analytical and technical skills to solve real-world business problems.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card"><span class="stat-number">15+</span><span class="stat-label">Analytics Projects</span></div>
+            <div class="stat-card"><span class="stat-number">Power BI</span><span class="stat-label">Dashboard Development</span></div>
+            <div class="stat-card"><span class="stat-number">VBA</span><span class="stat-label">Process Automation</span></div>
+            <div class="stat-card"><span class="stat-number">Banking</span><span class="stat-label">Domain Experience</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">MY SKILLS</p>
+          <h2>Technical &amp; Professional Skills</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">MY WORK</p>
+          <h2>Featured Analytics Projects</h2>
+          <p>A selection of dashboards and analytics projects created using Power BI, Excel, DAX and data analysis.</p>
+        </div>
+        <div class="project-filters" id="projectFilters"></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">EXPERIENCE</p>
+          <h2>Professional Journey</h2>
+        </div>
+        <div class="timeline" id="experienceTimeline"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">EDUCATION &amp; CERTIFICATIONS</p>
+          <h2>Academic Background</h2>
+        </div>
+        <div class="education-grid" id="educationGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-content">
+            <p class="section-label">LET'S CONNECT</p>
+            <h2>Have a project or opportunity?</h2>
+            <p>I'm interested in Data Analytics, Power BI, Business Intelligence, Banking Operations and related opportunities.</p>
+            <a id="contactEmailButton" href="#" class="btn primary-btn">Get In Touch →</a>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item"><span>Email</span><a id="contactEmail" href="#">your.email@example.com</a></div>
+            <div class="contact-item"><span>LinkedIn</span><a id="contactLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+            <div class="contact-item"><span>GitHub</span><a id="contactGitHub" href="#" target="_blank" rel="noopener">GitHub Profile</a></div>
+            <div class="contact-item"><span>Location</span><p id="contactLocation">Dubai, UAE</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© <span id="currentYear"></span> <span id="footerName">Nithish Kumar</span>. All Rights Reserved.</p>
+      <p>Built with HTML • CSS • JavaScript</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
