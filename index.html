@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nithish | Data Analyst & BI Portfolio</title>
+    <title>Nithish | Data Analyst & BI Specialist</title>
     <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,10 +30,10 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
-            padding-bottom: 50px;
+            padding-bottom: 90px; /* Space for the bottom navbar */
         }
 
-        /* Header Section */
+        /* Header / Profile Section */
         header {
             max-width: 1100px;
             margin: 40px auto 20px;
@@ -44,13 +44,17 @@
             flex-wrap: wrap;
         }
 
+        .profile-img-container {
+            position: relative;
+        }
+
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent-color);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
         }
 
         .header-text h1 {
@@ -61,48 +65,14 @@
         .header-text h2 {
             font-size: 1.2rem;
             color: var(--accent-color);
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 10px;
         }
 
         .header-text p {
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin-bottom: 15px;
-        }
-
-        .btn-container {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-            color: #fff;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--card-bg);
-            border-color: var(--accent-color);
         }
 
         /* Navigation / Category Filter */
@@ -119,11 +89,11 @@
             background-color: var(--card-bg);
             color: var(--text-muted);
             border: 1px solid var(--border-color);
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 0.9rem;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
 
         .filter-btn.active, .filter-btn:hover {
@@ -197,9 +167,56 @@
             text-decoration: underline;
         }
 
+        /* Fixed Bottom Action Bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .bar-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s ease;
+        }
+
+        .bar-btn:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        .bar-btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .bar-btn-outline:hover {
+            background-color: var(--card-bg);
+            border-color: var(--accent-color);
+        }
+
         footer {
             text-align: center;
-            margin-top: 50px;
+            margin: 40px 0 20px;
             color: var(--text-muted);
             font-size: 0.85rem;
         }
@@ -209,172 +226,179 @@
 
     <!-- Header / Bio Section -->
     <header>
-        <img src="profile.jpg" alt="Nithish Profile Picture" class="profile-img" id="profilePic" onerror="this.src='https://via.placeholder.com/150'">
+        <div class="profile-img-container">
+            <!-- Looks in your 'assets' folder for profile picture -->
+            <img src="assets/profile.jpg" alt="Nithish Profile" class="profile-img" onerror="this.src='https://via.placeholder.com/160?text=Nithish'">
+        </div>
         
         <div class="header-text">
             <h1>Nithish</h1>
             <h2>Data Analyst & BI Specialist</h2>
-            <p>Transforming complex datasets into actionable business intelligence across Sales, Finance, Banking, Supply Chain, and HR Analytics.</p>
-            
-            <div class="btn-container">
-                <a href="resume.pdf" target="_blank" class="btn"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
-                <a href="https://github.com/nithishibops" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Profile</a>
-            </div>
+            <p>Transforming complex enterprise datasets into interactive visual solutions using Power BI, Excel, and SQL across Sales, Banking, Supply Chain, and HR domains.</p>
         </div>
     </header>
 
     <!-- Project Filter Buttons -->
     <div class="filter-container">
-        <button class="filter-btn active" onclick="filterSelection('all')">All Projects</button>
-        <button class="filter-btn" onclick="filterSelection('sales')">Sales & E-Commerce</button>
-        <button class="filter-btn" onclick="filterSelection('finance')">Finance & Banking</button>
-        <button class="filter-btn" onclick="filterSelection('operations')">Operations & Supply Chain</button>
-        <button class="filter-btn" onclick="filterSelection('hr')">HR & Productivity</button>
-        <button class="filter-btn" onclick="filterSelection('specialized')">Specialized Analytics</button>
-        <button class="filter-btn" onclick="filterSelection('automation')">Automation</button>
+        <button class="filter-btn active" onclick="filterSelection('all', event)">All Projects</button>
+        <button class="filter-btn" onclick="filterSelection('sales', event)">Sales & E-Commerce</button>
+        <button class="filter-btn" onclick="filterSelection('finance', event)">Finance & Banking</button>
+        <button class="filter-btn" onclick="filterSelection('operations', event)">Operations</button>
+        <button class="filter-btn" onclick="filterSelection('hr', event)">HR & Productivity</button>
+        <button class="filter-btn" onclick="filterSelection('specialized', event)">Specialized</button>
+        <button class="filter-btn" onclick="filterSelection('automation', event)">Automation</button>
     </div>
 
-    <!-- Projects Grid -->
+    <!-- Projects Grid (Unique 15 Links) -->
     <section class="projects-section">
         <div class="grid">
 
-            <!-- Sales & E-Commerce -->
+            <!-- 1. E-Commerce Analytics -->
             <div class="card filter-item sales">
                 <div>
                     <div class="card-category">Sales & E-Commerce</div>
                     <h3 class="card-title">E-Commerce Analytics Dashboard</h3>
-                    <p class="card-desc">End-to-end sales performance, customer metrics, and revenue tracking visual insights.</p>
+                    <p class="card-desc">Comprehensive sales performance, customer churn metrics, and revenue tracking visual insights.</p>
                 </div>
                 <a href="https://github.com/nithishibops/E-Comerce-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
+            <!-- 2. Retail Sales -->
             <div class="card filter-item sales">
                 <div>
                     <div class="card-category">Sales & E-Commerce</div>
                     <h3 class="card-title">Retail Sales Analytics Dashboard</h3>
-                    <p class="card-desc">Comprehensive analysis of retail transactions, product categories, and regional sales performance.</p>
+                    <p class="card-desc">Analysis of retail transaction trends, product category movement, and store performance.</p>
                 </div>
                 <a href="https://github.com/nithishibops/retail-sales-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
+            <!-- 3. General Sales -->
             <div class="card filter-item sales">
                 <div>
                     <div class="card-category">Sales & E-Commerce</div>
                     <h3 class="card-title">Sales Analytics Dashboard</h3>
-                    <p class="card-desc">Interactive dashboard measuring KPIs, revenue growth, and seasonal sales trends.</p>
+                    <p class="card-desc">Interactive dashboard tracking high-level KPIs, YoY growth, and regional revenue channels.</p>
                 </div>
                 <a href="https://github.com/nithishibops/sales-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Finance & Banking -->
-            <div class="card filter-item finance">
-                <div>
-                    <div class="card-category">Finance & Banking</div>
-                    <h3 class="card-title">Finance & Budget Analytics</h3>
-                    <p class="card-desc">Budget vs. actual spending breakdown, variance analysis, and financial forecasting.</p>
-                </div>
-                <a href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <div class="card filter-item finance">
-                <div>
-                    <div class="card-category">Finance & Banking</div>
-                    <h3 class="card-title">Banking Operations Dashboard</h3>
-                    <p class="card-desc">Operational transaction flow, customer account analysis, and liquidity metrics.</p>
-                </div>
-                <a href="https://github.com/nithishibops/banking-operations-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <div class="card filter-item finance">
-                <div>
-                    <div class="card-category">Finance & Banking</div>
-                    <h3 class="card-title">Payment Gateway Analysis</h3>
-                    <p class="card-desc">Transaction success rates, payment failure modes, and gateway performance evaluation.</p>
-                </div>
-                <a href="https://github.com/nithishibops/payment-gateway-analysis" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <!-- Operations & Supply Chain -->
+            <!-- 4. Falcon Manufacturing -->
             <div class="card filter-item operations">
                 <div>
-                    <div class="card-category">Operations & Supply Chain</div>
-                    <h3 class="card-title">Supply Chain Analytics Dashboard</h3>
-                    <p class="card-desc">Inventory turnover rates, lead times, shipment tracking, and logistics optimization.</p>
-                </div>
-                <a href="https://github.com/nithishibops/supply-chain-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <div class="card filter-item operations">
-                <div>
-                    <div class="card-category">Operations & Supply Chain</div>
+                    <div class="card-category">Operations</div>
                     <h3 class="card-title">Falcon Manufacturing Dashboard</h3>
-                    <p class="card-desc">Production line efficiency, downtime tracking, and manufacturing yield metrics.</p>
+                    <p class="card-desc">Production line throughput, machine downtime evaluation, and yield metrics for manufacturing operational flow.</p>
                 </div>
                 <a href="https://github.com/nithishibops/Manufacturing-Operations-Dashboard---Falcon-Manufacturing-LLC" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- HR & Productivity -->
-            <div class="card filter-item hr">
+            <!-- 5. Supply Chain Analytics -->
+            <div class="card filter-item operations">
                 <div>
-                    <div class="card-category">HR & Productivity</div>
-                    <h3 class="card-title">HR Analytics Dashboard</h3>
-                    <p class="card-desc">Employee attrition rates, demographic distributions, and performance appraisals.</p>
+                    <div class="card-category">Operations</div>
+                    <h3 class="card-title">Supply Chain Analytics Dashboard</h3>
+                    <p class="card-desc">Inventory turnover rates, vendor lead times, shipment tracking, and logistics optimization.</p>
                 </div>
-                <a href="https://github.com/nithishibops/hr-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/nithishibops/supply-chain-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <div class="card filter-item hr">
+            <!-- 6. Finance & Budget -->
+            <div class="card filter-item finance">
                 <div>
-                    <div class="card-category">HR & Productivity</div>
-                    <h3 class="card-title">Productivity Dashboard (Excel)</h3>
-                    <p class="card-desc">Advanced Excel model analyzing workforce output, task duration, and productivity indexes.</p>
+                    <div class="card-category">Finance & Banking</div>
+                    <h3 class="card-title">Finance & Budget Analytics</h3>
+                    <p class="card-desc">Budget vs. actual variance analysis, cost allocation reporting, and financial forecasting.</p>
                 </div>
-                <a href="https://github.com/nithishibops/productivity-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <div class="card filter-item hr">
+            <!-- 7. Banking Operations -->
+            <div class="card filter-item finance">
                 <div>
-                    <div class="card-category">HR & Productivity</div>
-                    <h3 class="card-title">Attendance Dashboard (Excel)</h3>
-                    <p class="card-desc">Automated attendance management system tracking leave, overtime, and work shifts.</p>
+                    <div class="card-category">Finance & Banking</div>
+                    <h3 class="card-title">Banking Operations Dashboard</h3>
+                    <p class="card-desc">Transaction flow auditing, customer liquidity monitoring, and operational compliance tracking.</p>
                 </div>
-                <a href="https://github.com/nithishibops/attendance-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/nithishibops/banking-operations-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Specialized Analytics -->
+            <!-- 8. Payment Gateway Analysis -->
+            <div class="card filter-item finance">
+                <div>
+                    <div class="card-category">Finance & Banking</div>
+                    <h3 class="card-title">Payment Gateway Analysis</h3>
+                    <p class="card-desc">Transaction completion success rates, failure diagnosis, and gateway performance benchmark.</p>
+                </div>
+                <a href="https://github.com/nithishibops/payment-gateway-analysis" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 9. Hotel Analytics -->
             <div class="card filter-item specialized">
                 <div>
-                    <div class="card-category">Specialized Analytics</div>
-                    <h3 class="card-title">Hospital Analytics Dashboard</h3>
-                    <p class="card-desc">Patient admission rates, bed utilization, length of stay, and medical treatment metrics.</p>
-                </div>
-                <a href="https://github.com/nithishibops/hospital-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <div class="card filter-item specialized">
-                <div>
-                    <div class="card-category">Specialized Analytics</div>
+                    <div class="card-category">Specialized</div>
                     <h3 class="card-title">Hotel & Hospitality Analytics</h3>
-                    <p class="card-desc">Booking cancellation tracking, ADR (Average Daily Rate), and occupancy intelligence.</p>
+                    <p class="card-desc">Booking cancellation trends, ADR (Average Daily Rate), occupancy tracking, and guest retention insights.</p>
                 </div>
                 <a href="https://github.com/nithishibops/Hotel-Analytics" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
+            <!-- 10. Population Analytics -->
             <div class="card filter-item specialized">
                 <div>
-                    <div class="card-category">Specialized Analytics</div>
+                    <div class="card-category">Specialized</div>
                     <h3 class="card-title">Population Analytics Dashboard</h3>
-                    <p class="card-desc">Demographic distribution patterns, growth trends, and regional population dynamics.</p>
+                    <p class="card-desc">Demographic distribution patterns, regional growth trends, and census statistics modeling.</p>
                 </div>
                 <a href="https://github.com/nithishibops/Population-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Automation -->
+            <!-- 11. Hospital Analytics -->
+            <div class="card filter-item specialized">
+                <div>
+                    <div class="card-category">Specialized</div>
+                    <h3 class="card-title">Hospital Analytics Dashboard</h3>
+                    <p class="card-desc">Patient admission rates, bed capacity utilization, average stay duration, and healthcare KPIs.</p>
+                </div>
+                <a href="https://github.com/nithishibops/hospital-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 12. Productivity Dashboard -->
+            <div class="card filter-item hr">
+                <div>
+                    <div class="card-category">HR & Productivity</div>
+                    <h3 class="card-title">Productivity Dashboard (Excel)</h3>
+                    <p class="card-desc">Advanced Excel model tracking employee output efficiency, task allocation, and operational metrics.</p>
+                </div>
+                <a href="https://github.com/nithishibops/productivity-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 13. Attendance Dashboard -->
+            <div class="card filter-item hr">
+                <div>
+                    <div class="card-category">HR & Productivity</div>
+                    <h3 class="card-title">Attendance Dashboard (Excel)</h3>
+                    <p class="card-desc">Automated attendance management system monitoring leave patterns, overtime, and work shifts.</p>
+                </div>
+                <a href="https://github.com/nithishibops/attendance-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 14. HR Analytics -->
+            <div class="card filter-item hr">
+                <div>
+                    <div class="card-category">HR & Productivity</div>
+                    <h3 class="card-title">HR Analytics Dashboard</h3>
+                    <p class="card-desc">Workforce demographics, attrition analysis, department turnover rates, and performance appraisals.</p>
+                </div>
+                <a href="https://github.com/nithishibops/hr-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- 15. Mail Merge Automation -->
             <div class="card filter-item automation">
                 <div>
                     <div class="card-category">Automation</div>
                     <h3 class="card-title">Mail Merge Offer Letter Automation</h3>
-                    <p class="card-desc">Automated HR workflow for bulk generating offer letters using dynamic data templates.</p>
+                    <p class="card-desc">Automated HR workflow system for dynamic bulk offer letter generation and email processing.</p>
                 </div>
                 <a href="https://github.com/nithishibops/mail-merge-offer-letter-automation" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
@@ -383,17 +407,30 @@
     </section>
 
     <footer>
-        <p>© 2026 Nithish. Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+        <p>© Nithish. Data Analyst Portfolio.</p>
     </footer>
+
+    <!-- Fixed Link Downbar (Bottom Navigation Bar) -->
+    <div class="bottom-bar">
+        <a href="assets/resume.pdf" target="_blank" class="bar-btn">
+            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+        <a href="https://github.com/nithishibops?tab=repositories" target="_blank" class="bar-btn bar-btn-outline">
+            <i class="fa-brands fa-github"></i> All Repositories
+        </a>
+        <a href="https://github.com/nithishibops" target="_blank" class="bar-btn bar-btn-outline">
+            <i class="fa-solid fa-envelope"></i> Contact Profile
+        </a>
+    </div>
 
     <!-- Filter Script -->
     <script>
-        function filterSelection(category) {
+        function filterSelection(category, e) {
             const items = document.querySelectorAll('.filter-item');
             const buttons = document.querySelectorAll('.filter-btn');
 
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if(e) e.target.classList.add('active');
 
             items.forEach(item => {
                 if (category === 'all' || item.classList.contains(category)) {
