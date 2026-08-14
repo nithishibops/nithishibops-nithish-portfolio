@@ -3,538 +3,3780 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nithish | Data Analyst & BI Specialist</title>
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <meta name="description"
+        content="Nithish Kumar S - Investment Banking Operations, Capital Markets, Banking & FinTech Operations and Business Intelligence Professional">
+
+    <meta name="author" content="Nithish Kumar S">
+
+    <title>Nithish Kumar S | Investment Banking & Business Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
+
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --accent-hover: #0284c7;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
-            --badge-bg: #0369a1;
+            --bg: #07111f;
+            --bg-secondary: #0a1727;
+            --panel: #0f1e31;
+            --panel-light: #12243a;
+            --border: #20364f;
+
+            --text: #eef5fb;
+            --muted: #9db0c4;
+
+            --blue: #48c6ff;
+            --purple: #8b7cff;
+            --green: #52d6a1;
+            --gold: #f4c76a;
+
+            --max-width: 1180px;
+
+            --radius: 18px;
+
+            --shadow:
+                0 20px 60px rgba(0, 0, 0, 0.30);
         }
+
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
         }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background:
+                radial-gradient(
+                    circle at 10% 0%,
+                    rgba(72,198,255,0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(139,124,255,0.10),
+                    transparent 30%
+                ),
+                var(--bg);
+
+            color: var(--text);
+
+            font-family: "Inter", Arial, sans-serif;
+
             line-height: 1.6;
-            padding-bottom: 90px; /* Space for the bottom navbar */
         }
 
-        /* Container Limit */
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: min(
+                var(--max-width),
+                calc(100% - 40px)
+            );
+
+            margin: auto;
         }
 
-        /* Header / Profile Section */
-        header {
-            margin: 40px auto 30px;
+
+        /* ================================
+           NAVIGATION
+        ================================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(7,17,31,0.88);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid rgba(32,54,79,0.8);
+        }
+
+
+        .nav-inner {
+            min-height: 72px;
+
             display: flex;
+
             align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
 
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
-        }
-
-        .header-text h1 {
-            font-size: 2.5rem;
-            color: var(--text-main);
-            margin-bottom: 4px;
-        }
-
-        .header-text h2 {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .header-text p {
-            color: var(--text-muted);
-            max-width: 680px;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-
-        /* Technical Skills Tags */
-        .skills-container {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .skill-badge {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--accent-color);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* Section Headlines */
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--text-main);
-            margin: 40px 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title i {
-            color: var(--accent-color);
-        }
-
-        /* Career Highlights / Pillars */
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .highlight-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 18px;
-            border-radius: 10px;
-            transition: border-color 0.3s;
-        }
-
-        .highlight-card:hover {
-            border-color: var(--accent-color);
-        }
-
-        .highlight-card h4 {
-            color: var(--accent-color);
-            font-size: 1.05rem;
-            margin-bottom: 6px;
-        }
-
-        .highlight-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* Navigation / Category Filter */
-        .filter-container {
-            margin: 20px 0 30px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background-color: var(--card-bg);
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
-            padding: 8px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: 0.3s ease;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            font-weight: 600;
-        }
-
-        /* Projects Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s, border-color 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-color);
+
+        .brand {
+            font-family: "Manrope";
+
+            font-size: 1.2rem;
+
+            font-weight: 800;
         }
 
-        .card-category {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            letter-spacing: 1px;
+
+        .brand span {
+            color: var(--blue);
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 24px;
+        }
+
+
+        .nav-links a {
+            color: var(--muted);
+
+            font-size: 0.85rem;
+
             font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+
+        .nav-resume {
+            padding: 9px 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 9px;
+
+            background: var(--panel);
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            padding: 85px 0 55px;
+        }
+
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.45fr
+                0.75fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+
+        .eyebrow {
+            display: inline-flex;
+
+            padding: 7px 12px;
+
+            border:
+                1px solid rgba(72,198,255,0.28);
+
+            background:
+                rgba(72,198,255,0.07);
+
+            border-radius: 999px;
+
+            color: var(--blue);
+
+            font-size: 0.72rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.1em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        h1 {
+            font-family: "Manrope";
+
+            font-size:
+                clamp(2.8rem, 6vw, 5rem);
+
+            line-height: 1;
+
+            letter-spacing: -0.055em;
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 span {
+            color: var(--blue);
+        }
+
+
+        .hero h2 {
+            font-size:
+                clamp(1.05rem, 2vw, 1.35rem);
+
+            color: #d9e5ef;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero-description {
+            color: var(--muted);
+
+            font-size: 1rem;
+
+            max-width: 760px;
+        }
+
+
+        .hero-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 17px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: var(--panel);
+
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-2px);
+
+            border-color: var(--blue);
+        }
+
+
+        .btn-primary {
+            background: var(--blue);
+
+            color: #04121c;
+
+            border-color: var(--blue);
+        }
+
+
+        .profile-area {
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .profile-image {
+            width: 275px;
+
+            height: 275px;
+
+            object-fit: cover;
+
+            border-radius: 28px;
+
+            border:
+                1px solid #355575;
+
+            box-shadow: var(--shadow);
+
+            background: var(--panel);
+        }
+
+
+        .profile-caption {
+            text-align: center;
+
+            color: var(--muted);
+
+            font-size: 0.75rem;
+
+            margin-top: 12px;
+        }
+
+
+        /* ================================
+           STATS
+        ================================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+
+            margin-top: 45px;
+        }
+
+
+        .stat {
+            padding: 18px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            background:
+                rgba(15,30,49,0.75);
+        }
+
+
+        .stat strong {
+            display: block;
+
+            font-family: "Manrope";
+
+            font-size: 1.35rem;
+        }
+
+
+        .stat span {
+            color: var(--muted);
+
+            font-size: 0.76rem;
+        }
+
+
+        /* ================================
+           SECTION
+        ================================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+
+        .section-head {
+            max-width: 760px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .section-label {
+            color: var(--blue);
+
+            font-size: 0.72rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
             margin-bottom: 8px;
         }
 
-        .card-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--text-main);
+
+        .section-title {
+            font-family: "Manrope";
+
+            font-size:
+                clamp(1.9rem, 3.5vw, 2.7rem);
+
+            line-height: 1.1;
+
+            letter-spacing: -0.035em;
         }
 
-        .card-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            flex-grow: 1;
+
+        .section-description {
+            color: var(--muted);
+
+            margin-top: 12px;
         }
 
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
+
+        /* ================================
+           PROFESSIONAL DOMAINS
+        ================================= */
+
+        .domain-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
         }
 
-        .card-link:hover {
-            text-decoration: underline;
+
+        .domain-card {
+            padding: 23px;
+
+            min-height: 185px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--panel),
+                    var(--bg-secondary)
+                );
         }
 
-        /* Fixed Bottom Action Bar */
-        .bottom-bar {
-            position: fixed;
+
+        .domain-number {
+            color: var(--blue);
+
+            font-size: 0.72rem;
+
+            font-weight: 800;
+        }
+
+
+        .domain-card h3 {
+            font-family: "Manrope";
+
+            font-size: 1.05rem;
+
+            margin: 12px 0 8px;
+        }
+
+
+        .domain-card p {
+            color: var(--muted);
+
+            font-size: 0.82rem;
+        }
+
+
+        /* ================================
+           EXPERIENCE
+        ================================= */
+
+        .timeline {
+            position: relative;
+        }
+
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 12px;
+
+            top: 0;
+
             bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid var(--border-color);
-            padding: 12px 20px;
+
+            width: 1px;
+
+            background: var(--border);
+        }
+
+
+        .experience {
+            position: relative;
+
+            padding-left: 45px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 6px;
+
+            top: 8px;
+
+            width: 13px;
+
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+            box-shadow:
+                0 0 0 5px rgba(72,198,255,0.08);
+        }
+
+
+        .experience-card {
+            padding: 25px;
+
+            background: var(--panel);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+        }
+
+
+        .experience-header {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            z-index: 1000;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
         }
 
-        .bar-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background-color: var(--accent-color);
-            color: var(--bg-color);
+
+        .experience h3 {
+            font-family: "Manrope";
+
+            font-size: 1.1rem;
+        }
+
+
+        .company {
+            color: var(--blue);
+
+            font-weight: 700;
+
+            margin-top: 3px;
+        }
+
+
+        .date {
+            color: var(--muted);
+
+            font-size: 0.78rem;
+        }
+
+
+        .experience ul {
+            margin:
+                15px 0 0 18px;
+        }
+
+
+        .experience li {
+            color: #c9d7e3;
+
+            font-size: 0.86rem;
+
+            margin: 7px 0;
+        }
+
+
+        .experience li::marker {
+            color: var(--blue);
+        }
+
+
+        /* ================================
+           SKILLS
+        ================================= */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+
+        .skill {
+            padding: 8px 11px;
+
+            background: var(--panel);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 9px;
+
+            color: #cfe0ee;
+
+            font-size: 0.78rem;
+
             font-weight: 600;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.3s ease;
         }
 
-        .bar-btn:hover {
-            background-color: var(--accent-hover);
-            color: #fff;
+
+        /* ================================
+           PROJECT FILTER
+        ================================= */
+
+        .filters {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin: 25px 0;
         }
 
-        .bar-btn-outline {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
+
+        .filter {
+            cursor: pointer;
+
+            padding: 9px 13px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 999px;
+
+            background: transparent;
+
+            color: var(--muted);
+
+            font-size: 0.76rem;
+
+            font-weight: 700;
         }
 
-        .bar-btn-outline:hover {
-            background-color: var(--card-bg);
-            border-color: var(--accent-color);
+
+        .filter.active,
+        .filter:hover {
+            background: var(--blue);
+
+            color: #04131f;
+
+            border-color: var(--blue);
         }
 
-        footer {
-            text-align: center;
-            margin: 50px 0 20px;
-            color: var(--text-muted);
+
+        /* ================================
+           PROJECTS
+        ================================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .project {
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            background: var(--panel);
+
+            transition: 0.25s;
+        }
+
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            border-color: #396181;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .project.hidden {
+            display: none;
+        }
+
+
+        .project-image {
+            height: 205px;
+
+            background: #091522;
+
+            overflow: hidden;
+        }
+
+
+        .project-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+        }
+
+
+        .project:hover img {
+            transform: scale(1.04);
+        }
+
+
+        .project-content {
+            padding: 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            flex: 1;
+        }
+
+
+        .project-category {
+            color: var(--blue);
+
+            font-size: 0.66rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            font-weight: 800;
+        }
+
+
+        .project h3 {
+            font-family: "Manrope";
+
+            font-size: 1.05rem;
+
+            margin: 7px 0;
+        }
+
+
+        .project p {
+            color: var(--muted);
+
+            font-size: 0.82rem;
+
+            flex: 1;
+        }
+
+
+        .technology {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin: 15px 0;
+        }
+
+
+        .technology span {
+            padding: 5px 7px;
+
+            background: #0a192a;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 6px;
+
+            color: #bdd0df;
+
+            font-size: 0.66rem;
+        }
+
+
+        .project-link {
+            color: var(--blue);
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+        }
+
+
+        /* ================================
+           FEATURED CASE STUDY
+        ================================= */
+
+        .case-study {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            gap: 25px;
+
+            padding: 30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #10253b,
+                    #0c1727
+                );
+        }
+
+
+        .case-study h3 {
+            font-family: "Manrope";
+
+            font-size: 1.55rem;
+
+            margin: 8px 0 13px;
+        }
+
+
+        .case-study p {
+            color: var(--muted);
+        }
+
+
+        .case-points {
+            display: grid;
+
+            gap: 9px;
+
+            margin-top: 18px;
+        }
+
+
+        .case-points div {
+            color: #cbd9e5;
+
+            font-size: 0.84rem;
+        }
+
+
+        .case-points strong {
+            color: var(--green);
+        }
+
+
+        .kpi-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .kpi {
+            padding: 18px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            background:
+                rgba(7,17,31,0.5);
+        }
+
+
+        .kpi strong {
+            font-family: "Manrope";
+
+            font-size: 1.25rem;
+        }
+
+
+        .kpi span {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 0.7rem;
+
+            margin-top: 3px;
+        }
+
+
+        /* ================================
+           EDUCATION
+        ================================= */
+
+        .two-column {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 18px;
+        }
+
+
+        .info-card {
+            padding: 24px;
+
+            background: var(--panel);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+        }
+
+
+        .info-card h3 {
+            font-family: "Manrope";
+
+            margin-bottom: 10px;
+        }
+
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+
             font-size: 0.85rem;
         }
+
+
+        .info-card ul {
+            margin-left: 18px;
+        }
+
+
+        /* ================================
+           CONTACT
+        ================================= */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.2fr
+                0.8fr;
+
+            gap: 18px;
+        }
+
+
+        .contact-card {
+            padding: 28px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--panel),
+                    #091625
+                );
+        }
+
+
+        .contact-card h3 {
+            font-family: "Manrope";
+
+            font-size: 1.5rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact-card p {
+            color: var(--muted);
+        }
+
+
+        .contact-links {
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+
+        .contact-links a {
+            padding: 11px 13px;
+
+            background: #0a1828;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 10px;
+
+            font-size: 0.82rem;
+        }
+
+
+        .contact-links a:hover {
+            color: var(--blue);
+
+            border-color: var(--blue);
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            padding: 30px 0 70px;
+
+            border-top:
+                1px solid var(--border);
+
+            color: var(--muted);
+
+            text-align: center;
+
+            font-size: 0.75rem;
+        }
+
+
+        /* ================================
+           IMAGE MODAL
+        ================================= */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+                rgba(1,7,14,0.9);
+
+            z-index: 200;
+        }
+
+
+        .modal.open {
+            display: flex;
+        }
+
+
+        .modal img {
+            max-width: 95vw;
+
+            max-height: 88vh;
+
+            border-radius: 12px;
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .close {
+            position: fixed;
+
+            top: 18px;
+
+            right: 25px;
+
+            border: none;
+
+            background: none;
+
+            color: white;
+
+            font-size: 2.2rem;
+
+            cursor: pointer;
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media(max-width: 950px) {
+
+            .hero-grid,
+            .case-study,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .profile-area {
+                justify-content: flex-start;
+
+                order: -1;
+            }
+
+
+            .domain-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .projects {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .stats {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media(max-width: 680px) {
+
+            .container {
+                width:
+                    calc(100% - 24px);
+            }
+
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .hero {
+                padding-top: 50px;
+            }
+
+
+            .domain-grid,
+            .projects,
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            section {
+                padding: 55px 0;
+            }
+
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+        }
+
     </style>
 </head>
+
+
 <body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="#home" class="brand">
+            Nithish<span>.</span>
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#about">
+                Profile
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                class="nav-resume"
+                href="assets/Resume.pdf"
+                target="_blank">
+
+                Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main id="home">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
 
     <div class="container">
 
-        <!-- Header / Resume Summary -->
-        <header>
+        <div class="hero-grid">
+
+
             <div>
-                <img src="assets/profile.jpg" alt="Nithish Profile" class="profile-img" onerror="this.src='https://via.placeholder.com/160?text=Nithish'">
-            </div>
-            
-            <div class="header-text">
-                <h1>Nithish</h1>
-                <h2>Data Analyst & Business Intelligence Specialist</h2>
-                <p>
-                    Results-driven Analytics Professional specializing in turning complex multi-industry data into actionable business intelligence. Experienced in developing automated dashboards, KPI frameworks, and data models across Sales, Banking, Supply Chain, and HR.
+
+                <div class="eyebrow">
+
+                    Investment Banking
+                    •
+                    Capital Markets
+                    •
+                    FinTech
+                    •
+                    BI
+
+                </div>
+
+
+                <h1>
+
+                    Nithish Kumar
+                    <span>S</span>
+
+                </h1>
+
+
+                <h2>
+
+                    Investment Banking Operations
+                    &
+                    Business Intelligence Professional
+
+                </h2>
+
+
+                <p class="hero-description">
+
+                    Banking and financial-services professional combining
+                    Investment Banking Operations, Capital Markets,
+                    Registry & RTA, Repository Operations, Banking Alliances,
+                    Payment Operations and Business Intelligence.
+
+                    Experienced in Power BI, DAX, Advanced Excel,
+                    Power Query, VBA automation, MIS reporting,
+                    settlement, reconciliation, KYC and operational analytics.
+
                 </p>
-                
-                <!-- Core Competencies -->
-                <div class="skills-container">
-                    <span class="skill-badge"><i class="fa-solid fa-chart-column"></i> Power BI</span>
-                    <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> Advanced Excel & DAX</span>
-                    <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL & Data Modeling</span>
-                    <span class="skill-badge"><i class="fa-solid fa-gears"></i> Process Automation</span>
-                    <span class="skill-badge"><i class="fa-solid fa-calculator"></i> Financial & Operations Analytics</span>
-                </div>
-            </div>
-        </header>
 
-        <!-- Career Impact Pillars -->
-        <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Key Analytics Capabilities</h3>
-        <div class="highlights-grid">
-            <div class="highlight-card">
-                <h4><i class="fa-solid fa-chart-line"></i> Strategic Dashboarding</h4>
-                <p>Designing interactive Power BI and Excel portals that track revenue growth, operational KPIs, and executive summaries.</p>
+
+                <div class="hero-actions">
+
+
+                    <a
+                        class="btn btn-primary"
+                        href="#projects">
+
+                        Explore Portfolio →
+
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="assets/Resume.pdf"
+                        target="_blank">
+
+                        View Resume
+
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
+                        target="_blank">
+
+                        LinkedIn
+
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+
+                </div>
+
             </div>
-            <div class="highlight-card">
-                <h4><i class="fa-solid fa-filter"></i> ETL & Data Hygiene</h4>
-                <p>Cleaning, structuring, and connecting disparate raw datasets from relational databases, APIs, and manual spreadsheets.</p>
+
+
+
+            <div class="profile-area">
+
+                <div>
+
+                    <!--
+                    Replace profile.jpg with your actual image.
+                    -->
+
+                    <img
+                        src="assets/profile.jpg"
+                        class="profile-image"
+                        alt="Nithish Kumar S">
+
+                    <div class="profile-caption">
+
+                        Dubai, UAE
+                        •
+                        Banking & Financial Services
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="highlight-card">
-                <h4><i class="fa-solid fa-robot"></i> Process Automation</h4>
-                <p>Building streamlined automated workflows using advanced Excel models and mail merge operations to save operational hours.</p>
-            </div>
-            <div class="highlight-card">
-                <h4><i class="fa-solid fa-building-columns"></i> Domain Versatility</h4>
-                <p>Experience covering Banking liquidity, E-Commerce funnels, Supply Chain logistics, Healthcare, and HR workforce metrics.</p>
-            </div>
+
         </div>
 
-        <!-- Projects Filter -->
-        <h3 class="section-title"><i class="fa-solid fa-folder-open"></i> Featured Portfolio Projects</h3>
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSelection('all', event)">All Projects</button>
-            <button class="filter-btn" onclick="filterSelection('sales', event)">Sales & E-Commerce</button>
-            <button class="filter-btn" onclick="filterSelection('finance', event)">Finance & Banking</button>
-            <button class="filter-btn" onclick="filterSelection('operations', event)">Operations</button>
-            <button class="filter-btn" onclick="filterSelection('hr', event)">HR & Productivity</button>
-            <button class="filter-btn" onclick="filterSelection('specialized', event)">Specialized Analytics</button>
-            <button class="filter-btn" onclick="filterSelection('automation', event)">Automation</button>
-        </div>
 
-        <!-- Projects Grid -->
-        <section>
-            <div class="grid">
 
-                <!-- 1. E-Commerce Analytics -->
-                <div class="card filter-item sales">
-                    <div>
-                        <div class="card-category">Sales & E-Commerce</div>
-                        <h3 class="card-title">E-Commerce Analytics Dashboard</h3>
-                        <p class="card-desc">Comprehensive sales performance, customer churn metrics, and revenue tracking visual insights.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/E-Comerce-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+        <!-- STATS -->
 
-                <!-- 2. Retail Sales -->
-                <div class="card filter-item sales">
-                    <div>
-                        <div class="card-category">Sales & E-Commerce</div>
-                        <h3 class="card-title">Retail Sales Analytics Dashboard</h3>
-                        <p class="card-desc">Analysis of retail transaction trends, product category movement, and store performance.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/retail-sales-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+        <div class="stats">
 
-                <!-- 3. General Sales -->
-                <div class="card filter-item sales">
-                    <div>
-                        <div class="card-category">Sales & E-Commerce</div>
-                        <h3 class="card-title">Sales Analytics Dashboard</h3>
-                        <p class="card-desc">Interactive dashboard tracking high-level KPIs, YoY growth, and regional revenue channels.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/sales-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
 
-                <!-- 4. Falcon Manufacturing -->
-                <div class="card filter-item operations">
-                    <div>
-                        <div class="card-category">Operations</div>
-                        <h3 class="card-title">Falcon Manufacturing Dashboard</h3>
-                        <p class="card-desc">Production line throughput, machine downtime evaluation, and yield metrics for manufacturing operational flow.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/Manufacturing-Operations-Dashboard---Falcon-Manufacturing-LLC" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+            <div class="stat">
 
-                <!-- 5. Supply Chain Analytics -->
-                <div class="card filter-item operations">
-                    <div>
-                        <div class="card-category">Operations</div>
-                        <h3 class="card-title">Supply Chain Analytics Dashboard</h3>
-                        <p class="card-desc">Inventory turnover rates, vendor lead times, shipment tracking, and logistics optimization.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/supply-chain-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <strong>
+                    4+ Years
+                </strong>
 
-                <!-- 6. Finance & Budget -->
-                <div class="card filter-item finance">
-                    <div>
-                        <div class="card-category">Finance & Banking</div>
-                        <h3 class="card-title">Finance & Budget Analytics</h3>
-                        <p class="card-desc">Budget vs. actual variance analysis, cost allocation reporting, and financial forecasting.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 7. Banking Operations -->
-                <div class="card filter-item finance">
-                    <div>
-                        <div class="card-category">Finance & Banking</div>
-                        <h3 class="card-title">Banking Operations Dashboard</h3>
-                        <p class="card-desc">Transaction flow auditing, customer liquidity monitoring, and operational compliance tracking.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/banking-operations-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 8. Payment Gateway Analysis -->
-                <div class="card filter-item finance">
-                    <div>
-                        <div class="card-category">Finance & Banking</div>
-                        <h3 class="card-title">Payment Gateway Analysis</h3>
-                        <p class="card-desc">Transaction completion success rates, failure diagnosis, and gateway performance benchmark.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/payment-gateway-analysis" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 9. Hotel Analytics -->
-                <div class="card filter-item specialized">
-                    <div>
-                        <div class="card-category">Specialized Analytics</div>
-                        <h3 class="card-title">Hotel & Hospitality Analytics</h3>
-                        <p class="card-desc">Booking cancellation trends, ADR (Average Daily Rate), occupancy tracking, and guest retention insights.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/Hotel-Analytics" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 10. Population Analytics -->
-                <div class="card filter-item specialized">
-                    <div>
-                        <div class="card-category">Specialized Analytics</div>
-                        <h3 class="card-title">Population Analytics Dashboard</h3>
-                        <p class="card-desc">Demographic distribution patterns, regional growth trends, and census statistics modeling.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/Population-Analytics-Dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 11. Hospital Analytics -->
-                <div class="card filter-item specialized">
-                    <div>
-                        <div class="card-category">Specialized Analytics</div>
-                        <h3 class="card-title">Hospital Analytics Dashboard</h3>
-                        <p class="card-desc">Patient admission rates, bed capacity utilization, average stay duration, and healthcare KPIs.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/hospital-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 12. Productivity Dashboard -->
-                <div class="card filter-item hr">
-                    <div>
-                        <div class="card-category">HR & Productivity</div>
-                        <h3 class="card-title">Productivity Dashboard (Excel)</h3>
-                        <p class="card-desc">Advanced Excel model tracking employee output efficiency, task allocation, and operational metrics.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/productivity-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 13. Attendance Dashboard -->
-                <div class="card filter-item hr">
-                    <div>
-                        <div class="card-category">HR & Productivity</div>
-                        <h3 class="card-title">Attendance Dashboard (Excel)</h3>
-                        <p class="card-desc">Automated attendance management system monitoring leave patterns, overtime, and work shifts.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/attendance-dashboard-excel" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 14. HR Analytics -->
-                <div class="card filter-item hr">
-                    <div>
-                        <div class="card-category">HR & Productivity</div>
-                        <h3 class="card-title">HR Analytics Dashboard</h3>
-                        <p class="card-desc">Workforce demographics, attrition analysis, department turnover rates, and performance appraisals.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/hr-analytics-dashboard" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-
-                <!-- 15. Mail Merge Automation -->
-                <div class="card filter-item automation">
-                    <div>
-                        <div class="card-category">Automation</div>
-                        <h3 class="card-title">Mail Merge Offer Letter Automation</h3>
-                        <p class="card-desc">Automated HR workflow system for dynamic bulk offer letter generation and email processing.</p>
-                    </div>
-                    <a href="https://github.com/nithishibops/mail-merge-offer-letter-automation" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <span>
+                    Banking & Financial Operations
+                </span>
 
             </div>
-        </section>
 
-        <footer>
-            <p>© Nithish. Data Analyst & BI Portfolio.</p>
-        </footer>
+
+            <div class="stat">
+
+                <strong>
+                    15+
+                </strong>
+
+                <span>
+                    Analytics Projects
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    RTA + Repository
+                </strong>
+
+                <span>
+                    Capital Markets Operations
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    Power BI + Excel
+                </strong>
+
+                <span>
+                    Reporting & Automation
+                </span>
+
+            </div>
+
+
+        </div>
 
     </div>
 
-    <!-- Fixed Link Downbar (Bottom Navigation Bar) -->
-    <div class="bottom-bar">
-        <a href="assets/resume.pdf" target="_blank" class="bar-btn">
-            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-        </a>
-        <a href="https://github.com/nithishibops?tab=repositories" target="_blank" class="bar-btn bar-btn-outline">
-            <i class="fa-brands fa-github"></i> All Repositories
-        </a>
-        <a href="https://github.com/nithishibops" target="_blank" class="bar-btn bar-btn-outline">
-            <i class="fa-solid fa-user"></i> GitHub Profile
-        </a>
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Professional Positioning
+            </div>
+
+            <h2 class="section-title">
+
+                Where financial operations
+                meets data intelligence.
+
+            </h2>
+
+
+            <p class="section-description">
+
+                My profile combines financial-services operations
+                with analytics and automation.
+
+                I understand the business process,
+                validate the underlying data,
+                control operational workflows and
+                convert information into management-ready insights.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="domain-grid">
+
+
+            <article class="domain-card">
+
+                <div class="domain-number">
+                    01
+                </div>
+
+                <h3>
+                    Investment Banking & Capital Markets
+                </h3>
+
+                <p>
+
+                    IPO processing, Rights Issues,
+                    Buybacks, Listing Offers,
+                    Call Money, Corporate Actions,
+                    settlement and reconciliation.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="domain-card">
+
+                <div class="domain-number">
+                    02
+                </div>
+
+                <h3>
+                    Registry & Repository
+                </h3>
+
+                <p>
+
+                    RTA operations, KYC checks,
+                    customer-record validation,
+                    bank-detail verification,
+                    penny-drop validation and quality control.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="domain-card">
+
+                <div class="domain-number">
+                    03
+                </div>
+
+                <h3>
+                    Banking Alliances & FinTech
+                </h3>
+
+                <p>
+
+                    Banking partner coordination,
+                    PSP/TSP interaction,
+                    merchant onboarding,
+                    documentation and payment operations.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="domain-card">
+
+                <div class="domain-number">
+                    04
+                </div>
+
+                <h3>
+                    Business Intelligence
+                </h3>
+
+                <p>
+
+                    Power BI, DAX, Power Query,
+                    Advanced Excel, VBA,
+                    data modelling, MIS and KPI reporting.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
     </div>
 
-    <!-- Filter Script -->
-    <script>
-        function filterSelection(category, e) {
-            const items = document.querySelectorAll('.filter-item');
-            const buttons = document.querySelectorAll('.filter-btn');
+</section>
 
-            buttons.forEach(btn => btn.classList.remove('active'));
-            if(e) e.target.classList.add('active');
 
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience">
+
+    <div class="container">
+
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Career
+            </div>
+
+            <h2 class="section-title">
+                Professional Experience
+            </h2>
+
+            <p class="section-description">
+
+                Experience across Banking Alliances,
+                FinTech, Investment Banking Operations,
+                Registry & RTA and Repository environments.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <!-- PRIMASOFT -->
+
+            <article class="experience">
+
+                <span class="timeline-dot"></span>
+
+
+                <div class="experience-card">
+
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h3>
+                                Senior Banking Alliance Executive
+                            </h3>
+
+                            <div class="company">
+                                Primasoft Technology EST
+                            </div>
+
+                        </div>
+
+
+                        <div class="date">
+                            Oct 2025 – Present
+                        </div>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            Manage banking-partner, merchant and
+                            payment-stakeholder coordination supporting
+                            onboarding, activation and ongoing operations.
+                        </li>
+
+
+                        <li>
+                            Lead merchant onboarding through KYC
+                            document review, corporate-record validation,
+                            banking-information checks and compliance requirements.
+                        </li>
+
+
+                        <li>
+                            Coordinate with PSPs, TSPs, merchants and
+                            internal teams for payment-gateway integration
+                            and merchant activation.
+                        </li>
+
+
+                        <li>
+                            Review agreements and supporting documents
+                            for completeness, accuracy and policy alignment.
+                        </li>
+
+
+                        <li>
+                            Prepare Excel-based MIS reports and operational
+                            trackers for onboarding status, pending actions
+                            and partner activities.
+                        </li>
+
+
+                        <li>
+                            Use Power BI, Advanced Excel, Power Query and
+                            VBA to improve reporting and operational analysis.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CAMEO -->
+
+            <article class="experience">
+
+                <span class="timeline-dot"></span>
+
+
+                <div class="experience-card">
+
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h3>
+                                Senior Assistant / Executive –
+                                Registry & RTA
+                            </h3>
+
+                            <div class="company">
+                                Cameo Corporate Services Ltd
+                            </div>
+
+                        </div>
+
+
+                        <div class="date">
+                            Oct 2023 – Aug 2025
+                        </div>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            Supported investment banking and
+                            capital-markets operations covering IPOs,
+                            Rights Issues, Buybacks, Listing Offers,
+                            Call Money and Corporate Actions.
+                        </li>
+
+
+                        <li>
+                            Processed transaction and customer-fund
+                            activities with focus on settlement,
+                            reconciliation and process control.
+                        </li>
+
+
+                        <li>
+                            Validated transaction records,
+                            investigated discrepancies and coordinated
+                            with internal teams, customers, banks and
+                            financial institutions.
+                        </li>
+
+
+                        <li>
+                            Prepared MIS reports and operational summaries
+                            for performance monitoring and management review.
+                        </li>
+
+
+                        <li>
+                            Worked within an RTA environment with exposure
+                            to securities and capital-markets operations.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CAMS -->
+
+            <article class="experience">
+
+                <span class="timeline-dot"></span>
+
+
+                <div class="experience-card">
+
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h3>
+                                Executive – Operations
+                                | Repository
+                            </h3>
+
+                            <div class="company">
+                                Computer Age Management Services Ltd
+                            </div>
+
+                        </div>
+
+
+                        <div class="date">
+                            Apr 2022 – Sep 2023
+                        </div>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            Performed KYC checks, customer-record updates,
+                            bank-detail verification and penny-drop validation.
+                        </li>
+
+
+                        <li>
+                            Prepared MIS reports, campaign reports,
+                            operational dashboards and data-quality summaries.
+                        </li>
+
+
+                        <li>
+                            Conducted quality checks and final validation
+                            to maintain processing standards.
+                        </li>
+
+
+                        <li>
+                            Coordinated with stakeholders and team members
+                            to resolve operational data issues.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Capabilities
+            </div>
+
+            <h2 class="section-title">
+                Core Skills
+            </h2>
+
+            <p class="section-description">
+                A combined financial-operations and analytics toolkit.
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+
+            <span class="skill">
+                Investment Banking Operations
+            </span>
+
+            <span class="skill">
+                Capital Markets Operations
+            </span>
+
+            <span class="skill">
+                IPO Processing
+            </span>
+
+            <span class="skill">
+                Rights Issues
+            </span>
+
+            <span class="skill">
+                Buybacks
+            </span>
+
+            <span class="skill">
+                Corporate Actions
+            </span>
+
+            <span class="skill">
+                RTA Operations
+            </span>
+
+            <span class="skill">
+                Repository Operations
+            </span>
+
+            <span class="skill">
+                Settlement
+            </span>
+
+            <span class="skill">
+                Reconciliation
+            </span>
+
+            <span class="skill">
+                KYC / AML
+            </span>
+
+            <span class="skill">
+                Banking Alliances
+            </span>
+
+            <span class="skill">
+                Merchant Onboarding
+            </span>
+
+            <span class="skill">
+                PSP / TSP Coordination
+            </span>
+
+            <span class="skill">
+                Payment Gateway Operations
+            </span>
+
+            <span class="skill">
+                Power BI
+            </span>
+
+            <span class="skill">
+                DAX
+            </span>
+
+            <span class="skill">
+                Power Query
+            </span>
+
+            <span class="skill">
+                Advanced Excel
+            </span>
+
+            <span class="skill">
+                VBA Macros
+            </span>
+
+            <span class="skill">
+                Data Modelling
+            </span>
+
+            <span class="skill">
+                SQL – Basic
+            </span>
+
+            <span class="skill">
+                MIS Reporting
+            </span>
+
+            <span class="skill">
+                KPI Reporting
+            </span>
+
+            <span class="skill">
+                Process Automation
+            </span>
+
+            <span class="skill">
+                Data Validation
+            </span>
+
+            <span class="skill">
+                Stakeholder Management
+            </span>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Analytics Portfolio
+            </div>
+
+            <h2 class="section-title">
+                Dashboard Projects
+            </h2>
+
+            <p class="section-description">
+
+                Business intelligence projects covering
+                finance, banking, FinTech, sales,
+                operations, HR and automation.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+
+            <button
+                class="filter active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="finance">
+
+                Finance & Banking
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="sales">
+
+                Sales & E-Commerce
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="operations">
+
+                Operations
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="hr">
+
+                HR & Productivity
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="specialized">
+
+                Specialized
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="automation">
+
+                Automation
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="projects">
+
+
+            <!-- ======================================
+                 FINANCE
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="finance">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/PAGE1-ExecutiveDashboard.png"
+                        alt="Corporate Finance Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Finance & Banking
+                    </div>
+
+
+                    <h3>
+                        Corporate Finance,
+                        Budget & Intelligence
+                    </h3>
+
+
+                    <p>
+
+                        Four-page executive dashboard
+                        covering revenue, profit,
+                        budget utilization, cost control
+                        and business drivers.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+                        <span>Star Schema</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard"
+                        target="_blank">
+
+                        View Repository →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="finance">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imagesbanking_dashboard.png"
+                        alt="Banking Operations Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Finance & Banking
+                    </div>
+
+
+                    <h3>
+                        Banking Operations Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Banking operational analytics
+                        covering transactions,
+                        performance, liquidity and
+                        management KPIs.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="finance">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imagespaymentgatway_dashboard.png"
+                        alt="Payment Gateway Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FinTech
+                    </div>
+
+
+                    <h3>
+                        Payment Gateway Analysis
+                    </h3>
+
+
+                    <p>
+
+                        Payment transaction analysis
+                        covering success rates,
+                        failures, trends and
+                        operational performance.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Payment Ops</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 SALES
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="sales">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/E - Commerce Analytics Dashbooards.png"
+                        alt="E-Commerce Analytics">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Sales & E-Commerce
+                    </div>
+
+
+                    <h3>
+                        E-Commerce Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Sales, customer, orders,
+                        fulfillment, payments and
+                        profitability analytics.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Power Query</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="sales">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imageretailsales_dashboard.png"
+                        alt="Retail Sales Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Sales & E-Commerce
+                    </div>
+
+
+                    <h3>
+                        Retail Sales Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Regional sales,
+                        product performance,
+                        store analysis and
+                        customer trends.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="sales">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imagessales_dashboard.png"
+                        alt="Sales Analytics Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Sales Analytics
+                    </div>
+
+
+                    <h3>
+                        Sales Analytics Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Executive sales analysis
+                        with revenue trends,
+                        regional performance and
+                        YoY analysis.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 OPERATIONS
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="operations">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/Page1-Executiveoverview.png"
+                        alt="Manufacturing Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Operations
+                    </div>
+
+
+                    <h3>
+                        Manufacturing Operations
+                    </h3>
+
+
+                    <p>
+
+                        Production, quality,
+                        inventory and cost
+                        performance dashboard.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Star Schema</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="operations">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imageSupplychainalytics_dashboard.png"
+                        alt="Supply Chain Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Operations
+                    </div>
+
+
+                    <h3>
+                        Supply Chain Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Inventory, supplier,
+                        shipment and logistics
+                        performance analytics.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 SPECIALIZED
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="specialized">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/Hotel Analytics (1).png"
+                        alt="Hotel Analytics Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Specialized Analytics
+                    </div>
+
+
+                    <h3>
+                        Hotel Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Occupancy, cancellation,
+                        ADR, booking trends and
+                        guest analytics.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="specialized">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/Population Analytics 1.png"
+                        alt="Population Analytics Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Specialized Analytics
+                    </div>
+
+
+                    <h3>
+                        Population Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Population trends,
+                        demographics,
+                        regional growth and
+                        distribution analytics.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Data Modelling</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="specialized">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imagehealthcare_dashboard.png"
+                        alt="Hospital Analytics Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Specialized Analytics
+                    </div>
+
+
+                    <h3>
+                        Hospital Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Patient admissions,
+                        hospital operations,
+                        bed utilization and
+                        healthcare KPIs.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 HR
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="hr">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/imageshranalytics_dashboard.png"
+                        alt="HR Analytics Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        HR & Productivity
+                    </div>
+
+
+                    <h3>
+                        HR Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Workforce demographics,
+                        attrition, department
+                        performance and employee
+                        analytics.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="hr">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/Dashboard For Addendence.png"
+                        alt="Attendance Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        HR & Productivity
+                    </div>
+
+
+                    <h3>
+                        Attendance Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Attendance,
+                        leave patterns,
+                        shifts, overtime and
+                        workforce monitoring.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Excel</span>
+                        <span>VBA</span>
+                        <span>Automation</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="project"
+                data-category="hr">
+
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/Productivity Dashboard.png"
+                        alt="Productivity Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        HR & Productivity
+                    </div>
+
+
+                    <h3>
+                        Productivity Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Employee output,
+                        task allocation,
+                        productivity and
+                        operational efficiency.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Excel</span>
+                        <span>VBA</span>
+                        <span>MIS</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ======================================
+                 AUTOMATION
+            ======================================= -->
+
+
+            <article
+                class="project"
+                data-category="automation">
+
+
+                <div
+                    class="project-image"
+                    style="
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:3rem;
+                    font-weight:800;
+                    color:#48c6ff;
+                    "
+                >
+
+                    VBA
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Automation
+                    </div>
+
+
+                    <h3>
+                        Mail Merge Automation
+                    </h3>
+
+
+                    <p>
+
+                        Excel-to-document automation
+                        for bulk offer-letter generation
+                        and operational workflows.
+
+                    </p>
+
+
+                    <div class="technology">
+
+                        <span>Excel</span>
+                        <span>VBA</span>
+                        <span>Mail Merge</span>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        View GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED CASE STUDY
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Featured Case Study
+            </div>
+
+            <h2 class="section-title">
+
+                Corporate Finance,
+                Budget & Intelligence
+
+            </h2>
+
+        </div>
+
+
+        <div class="case-study">
+
+
+            <div>
+
+                <div class="section-label">
+                    Power BI Case Study
+                </div>
+
+
+                <h3>
+                    From financial data
+                    to executive decision support
+                </h3>
+
+
+                <p>
+
+                    A four-page Power BI solution
+                    designed around Executive Overview,
+                    Revenue & Profit Intelligence,
+                    Cost & Budget Control and
+                    Business Drivers.
+
+                    The model uses a star schema
+                    connecting Date, Department,
+                    Manager and Region dimensions
+                    to a financial fact ledger.
+
+                </p>
+
+
+                <div class="case-points">
+
+                    <div>
+                        <strong>Business Problem:</strong>
+                        fragmented visibility into revenue,
+                        budget variance and departmental performance.
+                    </div>
+
+
+                    <div>
+                        <strong>Solution:</strong>
+                        executive KPI layer with DAX,
+                        variance analysis and time intelligence.
+                    </div>
+
+
+                    <div>
+                        <strong>Tools:</strong>
+                        Power BI, DAX, Excel and
+                        star-schema modelling.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="kpi-grid">
+
+
+                <div class="kpi">
+
+                    <strong>
+                        AED 5.4bn
+                    </strong>
+
+                    <span>
+                        Total Revenue
+                    </span>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <strong>
+                        AED 1.3bn
+                    </strong>
+
+                    <span>
+                        Total Profit
+                    </span>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <strong>
+                        90.31%
+                    </strong>
+
+                    <span>
+                        Budget Utilization
+                    </span>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <strong>
+                        10.03%
+                    </strong>
+
+                    <span>
+                        ROI
+                    </span>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <strong>
+                        59.23%
+                    </strong>
+
+                    <span>
+                        YoY Revenue Growth
+                    </span>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <strong>
+                        20,000
+                    </strong>
+
+                    <span>
+                        Dataset Rows
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="two-column">
+
+
+            <div class="info-card">
+
+                <h3>
+                    Education & Certification
+                </h3>
+
+
+                <p>
+                    <strong>
+                        Bachelor of Commerce –
+                        Computer Applications
+                    </strong>
+                </p>
+
+
+                <p>
+                    Alagappa University /
+                    Syed Ammal Arts & Science College
+                </p>
+
+
+                <p>
+                    2020 – 2023
+                    •
+                    79.01%
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    <strong>
+                        Certified Investment Banking Professional
+                    </strong>
+                </p>
+
+
+                <p>
+                    Imarticus Learning
+                    •
+                    2025
+                </p>
+
+
+                <p>
+
+                    Securities & Derivatives
+                    •
+                    Trade Life Cycle
+                    •
+                    AML/KYC
+                    •
+                    Settlement & Reconciliation
+                    •
+                    Asset Management
+                    •
+                    Risk Management
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <h3>
+                    Professional Focus
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Investment Banking Operations
+                    </li>
+
+                    <li>
+                        Capital Markets Operations
+                    </li>
+
+                    <li>
+                        Securities / RTA Operations
+                    </li>
+
+                    <li>
+                        Repository Operations
+                    </li>
+
+                    <li>
+                        Banking Alliances
+                    </li>
+
+                    <li>
+                        FinTech & Payment Operations
+                    </li>
+
+                    <li>
+                        Merchant Onboarding
+                    </li>
+
+                    <li>
+                        Business Intelligence
+                    </li>
+
+                    <li>
+                        Process Automation
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="section-label">
+                    Let's Connect
+                </div>
+
+
+                <h3>
+
+                    Open to banking,
+                    securities and FinTech opportunities.
+
+                </h3>
+
+
+                <p>
+
+                    Interested in roles across
+                    Investment Banking Operations,
+                    Capital Markets Operations,
+                    Banking Operations,
+                    Payment Operations,
+                    Merchant Onboarding,
+                    KYC/AML and Business Intelligence.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+
+                    <a
+                        class="btn btn-primary"
+                        href="mailto:nithish.ibops@gmail.com">
+
+                        Email Me
+
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="assets/Resume.pdf"
+                        target="_blank">
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <div class="contact-links">
+
+
+                    <a href="mailto:nithish.ibops@gmail.com">
+
+                        ✉
+                        nithish.ibops@gmail.com
+
+                    </a>
+
+
+                    <a href="tel:+971541643097">
+
+                        ☎
+                        +971 54 164 3097
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
+                        target="_blank">
+
+                        LinkedIn Profile
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/nithishibops"
+                        target="_blank">
+
+                        GitHub Profile
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Nithish Kumar S
+
+        •
+
+        Investment Banking Operations
+
+        •
+
+        Capital Markets
+
+        •
+
+        Banking & FinTech
+
+        •
+
+        Business Intelligence
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     IMAGE MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="imageModal"
+    aria-hidden="true">
+
+
+    <button
+        class="close"
+        id="closeModal">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="modalImage"
+        src=""
+        alt="Dashboard Preview">
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* ==========================================
+   PROJECT FILTER
+========================================== */
+
+
+const filterButtons =
+    document.querySelectorAll(".filter");
+
+
+const projects =
+    document.querySelectorAll(".project");
+
+
+filterButtons.forEach(button => {
+
+
+    button.addEventListener("click", () => {
+
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        const filter =
+            button.dataset.filter;
+
+
+        projects.forEach(project => {
+
+
+            if (
+                filter === "all" ||
+                project.dataset.category === filter
+            ) {
+
+                project.classList.remove("hidden");
+
+            } else {
+
+                project.classList.add("hidden");
+
+            }
+
+        });
+
+
+    });
+
+});
+
+
+
+/* ==========================================
+   IMAGE LIGHTBOX
+========================================== */
+
+
+const modal =
+    document.getElementById("imageModal");
+
+
+const modalImage =
+    document.getElementById("modalImage");
+
+
+const closeModal =
+    document.getElementById("closeModal");
+
+
+const dashboardImages =
+    document.querySelectorAll(
+        ".project-image img"
+    );
+
+
+dashboardImages.forEach(image => {
+
+
+    image.addEventListener("click", () => {
+
+
+        modalImage.src =
+            image.src;
+
+
+        modalImage.alt =
+            image.alt;
+
+
+        modal.classList.add("open");
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+    });
+
+});
+
+
+
+function hideModal() {
+
+
+    modal.classList.remove("open");
+
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    modalImage.src = "";
+
+}
+
+
+closeModal.addEventListener(
+    "click",
+    hideModal
+);
+
+
+modal.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target === modal
+        ) {
+
+            hideModal();
+
         }
-    </script>
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            hideModal();
+
+        }
+
+    }
+);
+
+
+</script>
+
+
 </body>
 </html>
