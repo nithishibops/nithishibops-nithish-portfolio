@@ -3,2152 +3,1862 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Nithish Kumar S - Investment Banking Operations, Capital Markets, Banking & FinTech Operations and Business Intelligence Professional">
+<meta name="description"
+content="Nithish Kumar S - Investment Banking Operations, Capital Markets, Banking, FinTech Operations and Business Intelligence Professional">
 
-    <meta name="author"
-        content="Nithish Kumar S">
+<meta name="author"
+content="Nithish Kumar S">
 
-    <title>
-        Nithish Kumar S | Investment Banking & Business Intelligence
-    </title>
+<title>
+Nithish Kumar S | Investment Banking & Business Intelligence
+</title>
 
 
-    <!-- GOOGLE FONTS -->
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
 
+<style>
 
-    <style>
+/* =====================================================
+   PREMIUM BLACK / BLUE / GOLD / PURPLE THEME
+===================================================== */
 
+:root {
 
-        /* =====================================================
-           ROOT
-        ===================================================== */
+    --bg: #030712;
 
-        :root {
+    --bg2: #060b16;
 
-            --bg: #07111f;
+    --panel: #0a1020;
 
-            --bg-secondary: #0a1727;
+    --panel2: #0e1628;
 
-            --panel: #0f1e31;
+    --border: rgba(88,112,150,0.28);
 
-            --panel-light: #12243a;
+    --text: #f5f7fb;
 
-            --border: #20364f;
+    --muted: #9caac0;
 
-            --text: #eef5fb;
+    --blue: #38bdf8;
 
-            --muted: #9db0c4;
+    --blue-bright: #60d8ff;
 
-            --blue: #48c6ff;
+    --purple: #9b7cff;
 
-            --purple: #8b7cff;
+    --purple-bright: #b79cff;
 
-            --green: #52d6a1;
+    --gold: #f5c76b;
 
-            --gold: #f4c76a;
+    --gold-bright: #ffe29a;
 
-            --max-width: 1180px;
+    --green: #48e0a4;
 
-            --radius: 18px;
+    --max-width: 1180px;
 
-            --shadow:
-                0 20px 60px rgba(0,0,0,0.30);
+    --radius: 18px;
 
-        }
+    --shadow:
+        0 20px 80px rgba(0,0,0,.55);
 
+}
 
-        * {
 
-            margin: 0;
+/* =====================================================
+   RESET
+===================================================== */
 
-            padding: 0;
+* {
 
-            box-sizing: border-box;
+    margin: 0;
 
-        }
+    padding: 0;
 
+    box-sizing: border-box;
 
-        html {
+}
 
-            scroll-behavior: smooth;
 
-        }
+html {
 
+    scroll-behavior: smooth;
 
-        body {
+}
 
-            background:
 
-                radial-gradient(
-                    circle at 10% 0%,
-                    rgba(72,198,255,0.10),
-                    transparent 30%
-                ),
+body {
 
-                radial-gradient(
-                    circle at 90% 15%,
-                    rgba(139,124,255,0.10),
-                    transparent 30%
-                ),
+    background:
 
-                var(--bg);
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(56,189,248,.13),
+            transparent 27%
+        ),
 
-            color: var(--text);
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(155,124,255,.14),
+            transparent 30%
+        ),
 
-            font-family:
-                "Inter",
-                Arial,
-                sans-serif;
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(245,199,107,.035),
+            transparent 40%
+        ),
 
-            line-height: 1.6;
+        var(--bg);
 
-        }
+    color: var(--text);
 
+    font-family: "Inter", Arial, sans-serif;
 
-        a {
+    line-height: 1.6;
 
-            color: inherit;
+}
 
-            text-decoration: none;
 
-        }
+body::before {
 
+    content: "";
 
-        img {
+    position: fixed;
 
-            max-width: 100%;
+    inset: 0;
 
-            display: block;
+    pointer-events: none;
 
-        }
+    background:
 
+        linear-gradient(
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        ),
 
-        .container {
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        );
 
-            width:
-                min(
-                    var(--max-width),
-                    calc(100% - 40px)
-                );
+    background-size: 60px 60px;
 
-            margin: auto;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
 
-        }
+}
 
 
+a {
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
+    color: inherit;
 
-        nav {
+    text-decoration: none;
 
-            position: sticky;
+}
 
-            top: 0;
 
-            z-index: 100;
+img {
 
-            background:
-                rgba(7,17,31,0.88);
+    max-width: 100%;
 
-            backdrop-filter:
-                blur(18px);
+    display: block;
 
-            border-bottom:
-                1px solid rgba(32,54,79,0.8);
+}
 
-        }
 
+.container {
 
-        .nav-inner {
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 40px)
+        );
 
-            min-height: 72px;
+    margin: auto;
 
-            display: flex;
+}
 
-            align-items: center;
 
-            justify-content: space-between;
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-        }
+nav {
 
+    position: sticky;
 
-        .brand {
+    top: 0;
 
-            font-family:
-                "Manrope";
+    z-index: 100;
 
-            font-size:
-                1.2rem;
+    background:
+        rgba(3,7,18,.82);
 
-            font-weight:
-                800;
+    backdrop-filter:
+        blur(22px);
 
-        }
+    border-bottom:
+        1px solid rgba(88,112,150,.25);
 
+}
 
-        .brand span {
 
-            color:
-                var(--blue);
+.nav-inner {
 
-        }
+    min-height: 74px;
 
+    display: flex;
 
-        .nav-links {
+    align-items: center;
 
-            display:
-                flex;
+    justify-content: space-between;
 
-            align-items:
-                center;
+}
 
-            gap:
-                24px;
 
-        }
+.brand {
 
+    font-family: "Manrope";
 
-        .nav-links a {
+    font-size: 1.3rem;
 
-            color:
-                var(--muted);
+    font-weight: 800;
 
-            font-size:
-                0.85rem;
+    letter-spacing: -.04em;
 
-            font-weight:
-                600;
+}
 
-            transition:
-                0.2s;
 
-        }
+.brand span {
 
+    color: var(--blue);
 
-        .nav-links a:hover {
+    text-shadow:
+        0 0 18px rgba(56,189,248,.8);
 
-            color:
-                var(--blue);
+}
 
-        }
 
+.nav-links {
 
-        .nav-resume {
+    display: flex;
 
-            padding:
-                9px 14px;
+    align-items: center;
 
-            border:
-                1px solid var(--border);
+    gap: 24px;
 
-            border-radius:
-                9px;
+}
 
-            background:
-                var(--panel);
 
-        }
+.nav-links a {
 
+    color: var(--muted);
 
+    font-size: .82rem;
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+    font-weight: 600;
 
-        .hero {
+    transition: .25s;
 
-            padding:
-                85px 0 55px;
+}
 
-        }
 
+.nav-links a:hover {
 
-        .hero-grid {
+    color: var(--blue-bright);
 
-            display:
-                grid;
+    text-shadow:
+        0 0 14px rgba(56,189,248,.7);
 
-            grid-template-columns:
-                1.45fr 0.75fr;
+}
 
-            gap:
-                55px;
 
-            align-items:
-                center;
+.nav-resume {
 
-        }
+    padding: 9px 15px;
 
+    border:
+        1px solid rgba(245,199,107,.35);
 
-        .eyebrow {
+    border-radius: 9px;
 
-            display:
-                inline-flex;
+    background:
+        rgba(245,199,107,.06);
 
-            padding:
-                7px 12px;
+    color: var(--gold-bright) !important;
 
-            border:
-                1px solid rgba(72,198,255,0.28);
+}
 
-            background:
-                rgba(72,198,255,0.07);
 
-            border-radius:
-                999px;
+/* =====================================================
+   HERO
+===================================================== */
 
-            color:
-                var(--blue);
+.hero {
 
-            font-size:
-                0.72rem;
+    padding: 95px 0 55px;
 
-            font-weight:
-                800;
+}
 
-            letter-spacing:
-                0.1em;
 
-            text-transform:
-                uppercase;
+.hero-grid {
 
-            margin-bottom:
-                20px;
+    display: grid;
 
-        }
+    grid-template-columns:
+        1.45fr
+        .75fr;
 
+    gap: 55px;
 
-        h1 {
+    align-items: center;
 
-            font-family:
-                "Manrope";
+}
 
-            font-size:
-                clamp(2.8rem,6vw,5rem);
 
-            line-height:
-                1;
+.eyebrow {
 
-            letter-spacing:
-                -0.055em;
+    display: inline-flex;
 
-            margin-bottom:
-                18px;
+    padding: 8px 13px;
 
-        }
+    border:
+        1px solid rgba(56,189,248,.35);
 
+    background:
+        linear-gradient(
+            90deg,
+            rgba(56,189,248,.08),
+            rgba(155,124,255,.08)
+        );
 
-        h1 span {
+    border-radius: 999px;
 
-            color:
-                var(--blue);
+    color: var(--blue-bright);
 
-        }
+    font-size: .7rem;
 
+    font-weight: 800;
 
-        .hero h2 {
+    letter-spacing: .12em;
 
-            font-size:
-                clamp(1.05rem,2vw,1.35rem);
+    text-transform: uppercase;
 
-            color:
-                #d9e5ef;
+    margin-bottom: 22px;
 
-            font-weight:
-                600;
+    box-shadow:
+        0 0 25px rgba(56,189,248,.08);
 
-            margin-bottom:
-                18px;
+}
 
-        }
 
+h1 {
 
-        .hero-description {
+    font-family: "Manrope";
 
-            color:
-                var(--muted);
+    font-size:
+        clamp(3rem,6vw,5.4rem);
 
-            font-size:
-                1rem;
+    line-height: .95;
 
-            max-width:
-                760px;
+    letter-spacing: -.065em;
 
-        }
+    margin-bottom: 20px;
 
+}
 
-        .hero-actions {
 
-            display:
-                flex;
+h1 span {
 
-            flex-wrap:
-                wrap;
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue-bright),
+            var(--purple-bright),
+            var(--gold-bright)
+        );
 
-            gap:
-                12px;
+    -webkit-background-clip: text;
 
-            margin-top:
-                28px;
+    -webkit-text-fill-color: transparent;
 
-        }
+    filter:
+        drop-shadow(
+            0 0 18px rgba(56,189,248,.25)
+        );
 
+}
 
-        .btn {
 
-            display:
-                inline-flex;
+.hero h2 {
 
-            align-items:
-                center;
+    font-size:
+        clamp(1.05rem,2vw,1.4rem);
 
-            justify-content:
-                center;
+    color: #dbeafe;
 
-            padding:
-                12px 17px;
+    font-weight: 600;
 
-            border:
-                1px solid var(--border);
+    margin-bottom: 18px;
 
-            border-radius:
-                10px;
+}
 
-            background:
-                var(--panel);
 
-            font-size:
-                0.85rem;
+.hero-description {
 
-            font-weight:
-                700;
+    color: var(--muted);
 
-            transition:
-                0.2s;
+    font-size: .98rem;
 
-        }
+    max-width: 780px;
 
+}
 
-        .btn:hover {
 
-            transform:
-                translateY(-2px);
+.hero-actions {
 
-            border-color:
-                var(--blue);
+    display: flex;
 
-        }
+    flex-wrap: wrap;
 
+    gap: 12px;
 
-        .btn-primary {
+    margin-top: 30px;
 
-            background:
-                var(--blue);
+}
 
-            color:
-                #04121c;
 
-            border-color:
-                var(--blue);
+.btn {
 
-        }
+    display: inline-flex;
 
+    align-items: center;
 
-        .profile-area {
+    justify-content: center;
 
-            display:
-                flex;
+    padding: 12px 18px;
 
-            justify-content:
-                center;
+    border:
+        1px solid var(--border);
 
-        }
+    border-radius: 10px;
 
+    background:
+        rgba(14,22,40,.8);
 
-        .profile-image {
+    font-size: .82rem;
 
-            width:
-                275px;
+    font-weight: 700;
 
-            height:
-                275px;
+    transition: .25s;
 
-            object-fit:
-                cover;
+}
 
-            border-radius:
-                28px;
 
-            border:
-                1px solid #355575;
+.btn:hover {
 
-            box-shadow:
-                var(--shadow);
+    transform:
+        translateY(-3px);
 
-            background:
-                var(--panel);
+    border-color:
+        var(--blue);
 
-        }
+    box-shadow:
+        0 0 25px rgba(56,189,248,.18);
 
+}
 
-        .profile-caption {
 
-            text-align:
-                center;
+.btn-primary {
 
-            color:
-                var(--muted);
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--purple)
+        );
 
-            font-size:
-                0.75rem;
+    color: white;
 
-            margin-top:
-                12px;
+    border: none;
 
-        }
+    box-shadow:
+        0 0 30px rgba(56,189,248,.18);
 
+}
 
 
-        /* =====================================================
-           HERO STATS
-        ===================================================== */
+.profile-area {
 
-        .stats {
+    display: flex;
 
-            display:
-                grid;
+    justify-content: center;
 
-            grid-template-columns:
-                repeat(4,1fr);
+}
 
-            gap:
-                12px;
 
-            margin-top:
-                45px;
+.profile-image {
 
-        }
+    width: 285px;
 
+    height: 285px;
 
-        .stat {
+    object-fit: cover;
 
-            padding:
-                18px;
+    border-radius: 30px;
 
-            border:
-                1px solid var(--border);
+    border:
+        1px solid rgba(56,189,248,.45);
 
-            border-radius:
-                14px;
+    box-shadow:
 
-            background:
-                rgba(15,30,49,0.75);
+        0 0 0 1px rgba(155,124,255,.12),
 
-        }
+        0 0 45px rgba(56,189,248,.15),
 
+        0 25px 70px rgba(0,0,0,.6);
 
-        .stat strong {
+    background: var(--panel);
 
-            display:
-                block;
+}
 
-            font-family:
-                "Manrope";
 
-            font-size:
-                1.35rem;
+.profile-caption {
 
-        }
+    text-align: center;
 
+    color: var(--muted);
 
-        .stat span {
+    font-size: .74rem;
 
-            color:
-                var(--muted);
+    margin-top: 13px;
 
-            font-size:
-                0.76rem;
+}
 
-        }
 
+/* =====================================================
+   CAPITAL MARKETS STATISTICS
+===================================================== */
 
+.stats {
 
-        /* =====================================================
-           SECTIONS
-        ===================================================== */
+    display: grid;
 
-        section {
+    grid-template-columns:
+        repeat(4,1fr);
 
-            padding:
-                75px 0;
+    gap: 13px;
 
-        }
+    margin-top: 48px;
 
+}
 
-        .section-head {
 
-            max-width:
-                760px;
+.stat {
 
-            margin-bottom:
-                30px;
+    position: relative;
 
-        }
+    overflow: hidden;
 
+    padding: 20px;
 
-        .section-label {
+    min-height: 105px;
 
-            color:
-                var(--blue);
+    border:
+        1px solid var(--border);
 
-            font-size:
-                0.72rem;
+    border-radius: 15px;
 
-            font-weight:
-                800;
+    background:
 
-            letter-spacing:
-                0.12em;
+        linear-gradient(
+            145deg,
+            rgba(14,22,40,.95),
+            rgba(5,10,20,.95)
+        );
 
-            text-transform:
-                uppercase;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025);
 
-            margin-bottom:
-                8px;
+    transition: .3s;
 
-        }
+}
 
 
-        .section-title {
+.stat::before {
 
-            font-family:
-                "Manrope";
+    content: "";
 
-            font-size:
-                clamp(1.9rem,3.5vw,2.7rem);
+    position: absolute;
 
-            line-height:
-                1.1;
+    width: 90px;
 
-            letter-spacing:
-                -0.035em;
+    height: 90px;
 
-        }
+    right: -35px;
 
+    top: -35px;
 
-        .section-description {
+    border-radius: 50%;
 
-            color:
-                var(--muted);
+    background:
+        rgba(56,189,248,.08);
 
-            margin-top:
-                12px;
+    filter: blur(12px);
 
-        }
+}
 
 
+.stat:hover {
 
-        /* =====================================================
-           PROFESSIONAL DOMAINS
-        ===================================================== */
+    transform:
+        translateY(-5px);
 
-        .domain-grid {
+    border-color:
+        rgba(56,189,248,.55);
 
-            display:
-                grid;
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.4),
+        0 0 30px rgba(56,189,248,.08);
 
-            grid-template-columns:
-                repeat(4,1fr);
+}
 
-            gap:
-                14px;
 
-        }
+.stat strong {
 
+    display: block;
 
-        .domain-card {
+    font-family: "Manrope";
 
-            padding:
-                23px;
+    font-size: 1.65rem;
 
-            min-height:
-                185px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-bright),
+            var(--blue-bright)
+        );
 
-            border:
-                1px solid var(--border);
+    -webkit-background-clip: text;
 
-            border-radius:
-                var(--radius);
+    -webkit-text-fill-color: transparent;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    var(--panel),
-                    var(--bg-secondary)
-                );
+}
 
-        }
 
+.stat span {
 
-        .domain-number {
+    color: var(--muted);
 
-            color:
-                var(--blue);
+    font-size: .72rem;
 
-            font-size:
-                0.72rem;
+}
 
-            font-weight:
-                800;
 
-        }
+/* =====================================================
+   SECTION
+===================================================== */
 
+section {
 
-        .domain-card h3 {
+    padding: 80px 0;
 
-            font-family:
-                "Manrope";
+}
 
-            font-size:
-                1.05rem;
 
-            margin:
-                12px 0 8px;
+.section-head {
 
-        }
+    max-width: 780px;
 
+    margin-bottom: 32px;
 
-        .domain-card p {
+}
 
-            color:
-                var(--muted);
 
-            font-size:
-                0.82rem;
+.section-label {
 
-        }
+    color: var(--gold);
 
+    font-size: .68rem;
 
+    font-weight: 800;
 
-        /* =====================================================
-           NEW - ISSUE STATISTICS
-        ===================================================== */
+    letter-spacing: .14em;
 
-        .issue-section {
+    text-transform: uppercase;
 
-            margin-top:
-                35px;
+    margin-bottom: 9px;
 
-            padding:
-                30px;
+}
 
-            border:
-                1px solid rgba(244,199,106,0.28);
 
-            border-radius:
-                22px;
+.section-title {
 
-            background:
+    font-family: "Manrope";
 
-                linear-gradient(
-                    135deg,
-                    rgba(244,199,106,0.08),
-                    rgba(139,124,255,0.06),
-                    rgba(7,17,31,0.75)
-                );
+    font-size:
+        clamp(2rem,3.5vw,2.8rem);
 
-            box-shadow:
-                0 20px 60px rgba(0,0,0,0.20);
+    line-height: 1.05;
 
-        }
+    letter-spacing: -.045em;
 
+}
 
-        .issue-header {
 
-            display:
-                flex;
+.section-description {
 
-            justify-content:
-                space-between;
+    color: var(--muted);
 
-            align-items:
-                flex-end;
+    margin-top: 13px;
 
-            gap:
-                20px;
+}
 
-            margin-bottom:
-                25px;
 
-            flex-wrap:
-                wrap;
+/* =====================================================
+   DOMAIN CARDS
+===================================================== */
 
-        }
+.domain-grid {
 
+    display: grid;
 
-        .issue-title {
+    grid-template-columns:
+        repeat(4,1fr);
 
-            font-family:
-                "Manrope";
+    gap: 15px;
 
-            font-size:
-                1.55rem;
+}
 
-            color:
-                var(--text);
 
-        }
+.domain-card {
 
+    position: relative;
 
-        .issue-subtitle {
+    overflow: hidden;
 
-            color:
-                var(--muted);
+    padding: 25px;
 
-            font-size:
-                0.82rem;
+    min-height: 190px;
 
-            margin-top:
-                4px;
+    border:
+        1px solid var(--border);
 
-        }
+    border-radius: var(--radius);
 
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14,22,40,.98),
+            rgba(5,10,20,.98)
+        );
 
-        .issue-total {
+    transition: .3s;
 
-            padding:
-                12px 18px;
+}
 
-            border:
-                1px solid
-                rgba(244,199,106,0.45);
 
-            border-radius:
-                12px;
+.domain-card::after {
 
-            background:
-                rgba(244,199,106,0.08);
+    content: "";
 
-            text-align:
-                center;
+    position: absolute;
 
-        }
+    width: 120px;
 
+    height: 120px;
 
-        .issue-total strong {
+    right: -50px;
 
-            display:
-                block;
+    bottom: -50px;
 
-            color:
-                var(--gold);
+    border-radius: 50%;
 
-            font-family:
-                "Manrope";
+    background:
+        rgba(155,124,255,.08);
 
-            font-size:
-                1.45rem;
+    filter: blur(20px);
 
-        }
+}
 
 
-        .issue-total span {
+.domain-card:hover {
 
-            color:
-                var(--muted);
+    transform:
+        translateY(-6px);
 
-            font-size:
-                0.68rem;
+    border-color:
+        rgba(155,124,255,.45);
 
-            text-transform:
-                uppercase;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.4),
+        0 0 30px rgba(155,124,255,.08);
 
-            letter-spacing:
-                0.08em;
+}
 
-        }
 
+.domain-number {
 
-        .issue-grid {
+    color: var(--blue);
 
-            display:
-                grid;
+    font-size: .7rem;
 
-            grid-template-columns:
-                repeat(4,1fr);
+    font-weight: 800;
 
-            gap:
-                12px;
+}
 
-        }
 
+.domain-card h3 {
 
-        .issue-card {
+    font-family: "Manrope";
 
-            position:
-                relative;
+    font-size: 1.05rem;
 
-            padding:
-                19px;
+    margin: 12px 0 8px;
 
-            min-height:
-                115px;
+}
 
-            border:
-                1px solid var(--border);
 
-            border-radius:
-                15px;
+.domain-card p {
 
-            background:
-                rgba(10,23,39,0.82);
+    color: var(--muted);
 
-            overflow:
-                hidden;
+    font-size: .81rem;
 
-            transition:
-                0.25s;
+}
 
-        }
 
+/* =====================================================
+   EXPERIENCE
+===================================================== */
 
-        .issue-card::before {
+.timeline {
 
-            content:
-                "";
+    position: relative;
 
-            position:
-                absolute;
+}
 
-            top:
-                0;
 
-            left:
-                0;
+.timeline::before {
 
-            right:
-                0;
+    content: "";
 
-            height:
-                2px;
+    position: absolute;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--gold),
-                    var(--purple),
-                    var(--blue)
-                );
+    left: 12px;
 
-        }
+    top: 0;
 
+    bottom: 0;
 
-        .issue-card:hover {
+    width: 1px;
 
-            transform:
-                translateY(-4px);
+    background:
+        linear-gradient(
+            var(--blue),
+            var(--purple),
+            var(--gold)
+        );
 
-            border-color:
-                rgba(244,199,106,0.5);
+    opacity: .5;
 
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.25);
+}
 
-        }
 
+.experience {
 
-        .issue-card strong {
+    position: relative;
 
-            display:
-                block;
+    padding-left: 45px;
 
-            font-family:
-                "Manrope";
+    margin-bottom: 30px;
 
-            font-size:
-                1.65rem;
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--gold),
-                    #fff0b8
-                );
 
-            -webkit-background-clip:
-                text;
+.timeline-dot {
 
-            -webkit-text-fill-color:
-                transparent;
+    position: absolute;
 
-        }
+    left: 6px;
 
+    top: 8px;
 
-        .issue-card span {
+    width: 13px;
 
-            display:
-                block;
+    height: 13px;
 
-            color:
-                #cbd8e5;
+    border-radius: 50%;
 
-            font-size:
-                0.78rem;
+    background:
+        var(--blue-bright);
 
-            margin-top:
-                3px;
+    box-shadow:
+        0 0 0 5px rgba(56,189,248,.08),
+        0 0 20px rgba(56,189,248,.8);
 
-        }
+}
 
 
-        .issue-card.highlight {
+.experience-card {
 
-            border-color:
-                rgba(139,124,255,0.45);
+    padding: 26px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(139,124,255,0.13),
-                    rgba(15,30,49,0.9)
-                );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,16,32,.98),
+            rgba(6,11,22,.98)
+        );
 
-        }
+    border:
+        1px solid var(--border);
 
+    border-radius: var(--radius);
 
-        .issue-card.highlight strong {
+    transition: .3s;
 
-            font-size:
-                1.9rem;
+}
 
-        }
 
+.experience-card:hover {
 
+    border-color:
+        rgba(56,189,248,.35);
 
-        /* =====================================================
-           EXPERIENCE
-        ===================================================== */
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
 
-        .timeline {
+}
 
-            position:
-                relative;
 
-        }
+.experience-header {
 
+    display: flex;
 
-        .timeline::before {
+    justify-content: space-between;
 
-            content:
-                "";
+    gap: 20px;
 
-            position:
-                absolute;
+    flex-wrap: wrap;
 
-            left:
-                12px;
+}
 
-            top:
-                0;
 
-            bottom:
-                0;
+.experience h3 {
 
-            width:
-                1px;
+    font-family: "Manrope";
 
-            background:
-                var(--border);
+    font-size: 1.1rem;
 
-        }
+}
 
 
-        .experience {
+.company {
 
-            position:
-                relative;
+    color: var(--blue-bright);
 
-            padding-left:
-                45px;
+    font-weight: 700;
 
-            margin-bottom:
-                30px;
+    margin-top: 3px;
 
-        }
+}
 
 
-        .timeline-dot {
+.date {
 
-            position:
-                absolute;
+    color: var(--gold);
 
-            left:
-                6px;
+    font-size: .76rem;
 
-            top:
-                8px;
+}
 
-            width:
-                13px;
 
-            height:
-                13px;
+.experience ul {
 
-            border-radius:
-                50%;
+    margin:
+        15px 0 0 18px;
 
-            background:
-                var(--blue);
+}
 
-            box-shadow:
-                0 0 0 5px
-                rgba(72,198,255,0.08);
 
-        }
+.experience li {
 
+    color: #c8d5e5;
 
-        .experience-card {
+    font-size: .84rem;
 
-            padding:
-                25px;
+    margin: 7px 0;
 
-            background:
-                var(--panel);
+}
 
-            border:
-                1px solid var(--border);
 
-            border-radius:
-                var(--radius);
+.experience li::marker {
 
-        }
+    color: var(--blue);
 
+}
 
-        .experience-header {
 
-            display:
-                flex;
+/* =====================================================
+   SKILLS
+===================================================== */
 
-            justify-content:
-                space-between;
+.skills {
 
-            gap:
-                20px;
+    display: flex;
 
-            flex-wrap:
-                wrap;
+    flex-wrap: wrap;
 
-        }
+    gap: 9px;
 
+}
 
-        .experience h3 {
 
-            font-family:
-                "Manrope";
+.skill {
 
-            font-size:
-                1.1rem;
+    padding: 8px 11px;
 
-        }
+    background:
+        rgba(10,16,32,.85);
 
+    border:
+        1px solid var(--border);
 
-        .company {
+    border-radius: 9px;
 
-            color:
-                var(--blue);
+    color: #d1dbea;
 
-            font-weight:
-                700;
+    font-size: .77rem;
 
-            margin-top:
-                3px;
+    font-weight: 600;
 
-        }
+    transition: .2s;
 
+}
 
-        .date {
 
-            color:
-                var(--muted);
+.skill:hover {
 
-            font-size:
-                0.78rem;
+    color: white;
 
-        }
+    border-color:
+        var(--purple);
 
+    box-shadow:
+        0 0 18px rgba(155,124,255,.12);
 
-        .experience ul {
+}
 
-            margin:
-                15px 0 0 18px;
 
-        }
+/* =====================================================
+   FILTER
+===================================================== */
 
+.filters {
 
-        .experience li {
+    display: flex;
 
-            color:
-                #c9d7e3;
+    flex-wrap: wrap;
 
-            font-size:
-                0.86rem;
+    gap: 9px;
 
-            margin:
-                7px 0;
+    margin: 25px 0;
 
-        }
+}
 
 
-        .experience li::marker {
+.filter {
 
-            color:
-                var(--blue);
+    cursor: pointer;
 
-        }
+    padding: 9px 14px;
 
+    border:
+        1px solid var(--border);
 
+    border-radius: 999px;
 
-        /* =====================================================
-           SKILLS
-        ===================================================== */
+    background: transparent;
 
-        .skills {
+    color: var(--muted);
 
-            display:
-                flex;
+    font-size: .75rem;
 
-            flex-wrap:
-                wrap;
+    font-weight: 700;
 
-            gap:
-                9px;
+    transition: .25s;
 
-        }
+}
 
 
-        .skill {
+.filter.active,
+.filter:hover {
 
-            padding:
-                8px 11px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--purple)
+        );
 
-            background:
-                var(--panel);
+    color: white;
 
-            border:
-                1px solid var(--border);
+    border-color: transparent;
 
-            border-radius:
-                9px;
+    box-shadow:
+        0 0 22px rgba(56,189,248,.15);
 
-            color:
-                #cfe0ee;
+}
 
-            font-size:
-                0.78rem;
 
-            font-weight:
-                600;
+/* =====================================================
+   PROJECTS
+===================================================== */
 
-        }
+.projects {
 
+    display: grid;
 
+    grid-template-columns:
+        repeat(3,1fr);
 
-        /* =====================================================
-           PROJECT FILTER
-        ===================================================== */
+    gap: 18px;
 
-        .filters {
+}
 
-            display:
-                flex;
 
-            flex-wrap:
-                wrap;
+.project {
 
-            gap:
-                9px;
+    overflow: hidden;
 
-            margin:
-                25px 0;
+    display: flex;
 
-        }
+    flex-direction: column;
 
+    border:
+        1px solid var(--border);
 
-        .filter {
+    border-radius: var(--radius);
 
-            cursor:
-                pointer;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,16,32,.98),
+            rgba(5,10,20,.98)
+        );
 
-            padding:
-                9px 13px;
+    transition: .3s;
 
-            border:
-                1px solid var(--border);
+}
 
-            border-radius:
-                999px;
 
-            background:
-                transparent;
+.project:hover {
 
-            color:
-                var(--muted);
+    transform:
+        translateY(-7px);
 
-            font-size:
-                0.76rem;
+    border-color:
+        rgba(56,189,248,.5);
 
-            font-weight:
-                700;
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.5),
+        0 0 35px rgba(56,189,248,.08);
 
-        }
+}
 
 
-        .filter.active,
-        .filter:hover {
+.project.hidden {
 
-            background:
-                var(--blue);
+    display: none;
 
-            color:
-                #04131f;
+}
 
-            border-color:
-                var(--blue);
 
-        }
+.project-image {
 
+    height: 205px;
 
+    background:
+        #050a13;
 
-        /* =====================================================
-           PROJECTS
-        ===================================================== */
+    overflow: hidden;
 
-        .projects {
+}
 
-            display:
-                grid;
 
-            grid-template-columns:
-                repeat(3,1fr);
+.project-image img {
 
-            gap:
-                18px;
+    width: 100%;
 
-        }
+    height: 100%;
 
+    object-fit: cover;
 
-        .project {
+    cursor: pointer;
 
-            overflow:
-                hidden;
+    transition: .5s;
 
-            display:
-                flex;
+}
 
-            flex-direction:
-                column;
 
-            border:
-                1px solid var(--border);
+.project:hover img {
 
-            border-radius:
-                var(--radius);
+    transform:
+        scale(1.05);
 
-            background:
-                var(--panel);
+}
 
-            transition:
-                0.25s;
 
-        }
+.project-content {
 
+    padding: 20px;
 
-        .project:hover {
+    display: flex;
 
-            transform:
-                translateY(-5px);
+    flex-direction: column;
 
-            border-color:
-                #396181;
+    flex: 1;
 
-            box-shadow:
-                var(--shadow);
+}
 
-        }
 
+.project-category {
 
-        .project.hidden {
+    color: var(--gold);
 
-            display:
-                none;
+    font-size: .64rem;
 
-        }
+    text-transform: uppercase;
 
+    letter-spacing: .12em;
 
-        .project-image {
+    font-weight: 800;
 
-            height:
-                205px;
+}
 
-            background:
-                #091522;
 
-            overflow:
-                hidden;
+.project h3 {
 
-        }
+    font-family: "Manrope";
 
+    font-size: 1.05rem;
 
-        .project-image img {
+    margin: 7px 0;
 
-            width:
-                100%;
+}
 
-            height:
-                100%;
 
-            object-fit:
-                cover;
+.project p {
 
-            cursor:
-                pointer;
+    color: var(--muted);
 
-            transition:
-                0.4s;
+    font-size: .81rem;
 
-        }
+    flex: 1;
 
+}
 
-        .project:hover img {
 
-            transform:
-                scale(1.04);
+.technology {
 
-        }
+    display: flex;
 
+    flex-wrap: wrap;
 
-        .project-content {
+    gap: 6px;
 
-            padding:
-                20px;
+    margin: 15px 0;
 
-            display:
-                flex;
+}
 
-            flex-direction:
-                column;
 
-            flex:
-                1;
+.technology span {
 
-        }
+    padding: 5px 7px;
 
+    background:
+        rgba(56,189,248,.04);
 
-        .project-category {
+    border:
+        1px solid var(--border);
 
-            color:
-                var(--blue);
+    border-radius: 6px;
 
-            font-size:
-                0.66rem;
+    color: #bdd0df;
 
-            text-transform:
-                uppercase;
+    font-size: .65rem;
 
-            letter-spacing:
-                0.1em;
+}
 
-            font-weight:
-                800;
 
-        }
+.project-link {
 
+    color: var(--blue-bright);
 
-        .project h3 {
+    font-size: .77rem;
 
-            font-family:
-                "Manrope";
+    font-weight: 800;
 
-            font-size:
-                1.05rem;
+}
 
-            margin:
-                7px 0;
 
-        }
+.project-link:hover {
 
+    color: var(--gold-bright);
 
-        .project p {
+}
 
-            color:
-                var(--muted);
 
-            font-size:
-                0.82rem;
+/* =====================================================
+   FEATURED CASE STUDY
+===================================================== */
 
-            flex:
-                1;
+.case-study {
 
-        }
+    display: grid;
 
+    grid-template-columns:
+        1.1fr
+        .9fr;
 
-        .technology {
+    gap: 25px;
 
-            display:
-                flex;
+    padding: 32px;
 
-            flex-wrap:
-                wrap;
+    border:
+        1px solid rgba(245,199,107,.2);
 
-            gap:
-                6px;
+    border-radius: 22px;
 
-            margin:
-                15px 0;
+    background:
 
-        }
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(56,189,248,.08),
+            transparent 35%
+        ),
 
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(155,124,255,.08),
+            transparent 35%
+        ),
 
-        .technology span {
+        #080f1d;
 
-            padding:
-                5px 7px;
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.4);
 
-            background:
-                #0a192a;
+}
 
-            border:
-                1px solid var(--border);
 
-            border-radius:
-                6px;
+.case-study h3 {
 
-            color:
-                #bdd0df;
+    font-family: "Manrope";
 
-            font-size:
-                0.66rem;
+    font-size: 1.55rem;
 
-        }
+    margin: 8px 0 13px;
 
+}
 
-        .project-link {
 
-            color:
-                var(--blue);
+.case-study p {
 
-            font-size:
-                0.78rem;
+    color: var(--muted);
 
-            font-weight:
-                800;
+}
 
-        }
 
+.case-points {
 
+    display: grid;
 
-        /* =====================================================
-           FEATURED CASE STUDY
-        ===================================================== */
+    gap: 9px;
 
-        .case-study {
+    margin-top: 18px;
 
-            display:
-                grid;
+}
 
-            grid-template-columns:
-                1.1fr 0.9fr;
 
-            gap:
-                25px;
+.case-points div {
 
-            padding:
-                30px;
+    color: #cbd9e5;
 
-            border:
-                1px solid var(--border);
+    font-size: .83rem;
 
-            border-radius:
-                22px;
+}
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #10253b,
-                    #0c1727
-                );
 
-        }
+.case-points strong {
 
+    color: var(--gold);
 
-        .case-study h3 {
+}
 
-            font-family:
-                "Manrope";
 
-            font-size:
-                1.55rem;
+.kpi-grid {
 
-            margin:
-                8px 0 13px;
+    display: grid;
 
-        }
+    grid-template-columns:
+        repeat(2,1fr);
 
+    gap: 12px;
 
-        .case-study p {
+}
 
-            color:
-                var(--muted);
 
-        }
+.kpi {
 
+    padding: 19px;
 
-        .case-points {
+    border:
+        1px solid var(--border);
 
-            display:
-                grid;
+    border-radius: 14px;
 
-            gap:
-                9px;
+    background:
+        rgba(3,7,18,.65);
 
-            margin-top:
-                18px;
+    transition: .25s;
 
-        }
+}
 
 
-        .case-points div {
+.kpi:hover {
 
-            color:
-                #cbd9e5;
+    border-color:
+        rgba(245,199,107,.4);
 
-            font-size:
-                0.84rem;
+    box-shadow:
+        0 0 25px rgba(245,199,107,.07);
 
-        }
+}
 
 
-        .case-points strong {
+.kpi strong {
 
-            color:
-                var(--green);
+    font-family: "Manrope";
 
-        }
+    font-size: 1.25rem;
 
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-bright),
+            var(--purple-bright)
+        );
 
-        .kpi-grid {
+    -webkit-background-clip: text;
 
-            display:
-                grid;
+    -webkit-text-fill-color: transparent;
 
-            grid-template-columns:
-                repeat(2,1fr);
+}
 
-            gap:
-                12px;
 
-        }
+.kpi span {
 
+    display: block;
 
-        .kpi {
+    color: var(--muted);
 
-            padding:
-                18px;
+    font-size: .69rem;
 
-            border:
-                1px solid var(--border);
+    margin-top: 3px;
 
-            border-radius:
-                14px;
+}
 
-            background:
-                rgba(7,17,31,0.5);
 
-        }
+/* =====================================================
+   EDUCATION
+===================================================== */
 
+.two-column {
 
-        .kpi strong {
+    display: grid;
 
-            font-family:
-                "Manrope";
+    grid-template-columns:
+        1fr 1fr;
 
-            font-size:
-                1.25rem;
+    gap: 18px;
 
-        }
+}
 
 
-        .kpi span {
+.info-card {
 
-            display:
-                block;
+    padding: 25px;
 
-            color:
-                var(--muted);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,16,32,.98),
+            rgba(5,10,20,.98)
+        );
 
-            font-size:
-                0.7rem;
+    border:
+        1px solid var(--border);
 
-            margin-top:
-                3px;
+    border-radius: var(--radius);
 
-        }
+}
 
 
+.info-card h3 {
 
-        /* =====================================================
-           EDUCATION
-        ===================================================== */
+    font-family: "Manrope";
 
-        .two-column {
+    margin-bottom: 10px;
 
-            display:
-                grid;
+}
 
-            grid-template-columns:
-                1fr 1fr;
 
-            gap:
-                18px;
+.info-card p,
+.info-card li {
 
-        }
+    color: var(--muted);
 
+    font-size: .84rem;
 
-        .info-card {
+}
 
-            padding:
-                24px;
 
-            background:
-                var(--panel);
+.info-card ul {
 
-            border:
-                1px solid var(--border);
+    margin-left: 18px;
 
-            border-radius:
-                var(--radius);
+}
 
-        }
 
+/* =====================================================
+   CONTACT
+===================================================== */
 
-        .info-card h3 {
+.contact-grid {
 
-            font-family:
-                "Manrope";
+    display: grid;
 
-            margin-bottom:
-                10px;
+    grid-template-columns:
+        1.2fr
+        .8fr;
 
-        }
+    gap: 18px;
 
+}
 
-        .info-card p,
-        .info-card li {
 
-            color:
-                var(--muted);
+.contact-card {
 
-            font-size:
-                0.85rem;
+    padding: 29px;
 
-        }
+    border:
+        1px solid var(--border);
 
+    border-radius: 20px;
 
-        .info-card ul {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14,22,40,.98),
+            rgba(5,10,20,.98)
+        );
 
-            margin-left:
-                18px;
+}
 
-        }
 
+.contact-card h3 {
 
+    font-family: "Manrope";
 
-        /* =====================================================
-           CONTACT
-        ===================================================== */
+    font-size: 1.5rem;
 
-        .contact-grid {
+    margin-bottom: 8px;
 
-            display:
-                grid;
+}
 
-            grid-template-columns:
-                1.2fr 0.8fr;
 
-            gap:
-                18px;
+.contact-card p {
 
-        }
+    color: var(--muted);
 
+}
 
-        .contact-card {
 
-            padding:
-                28px;
+.contact-links {
 
-            border:
-                1px solid var(--border);
+    display: grid;
 
-            border-radius:
-                20px;
+    gap: 10px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    var(--panel),
-                    #091625
-                );
+    margin-top: 18px;
 
-        }
+}
 
 
-        .contact-card h3 {
+.contact-links a {
 
-            font-family:
-                "Manrope";
+    padding: 11px 13px;
 
-            font-size:
-                1.5rem;
+    background:
+        rgba(3,7,18,.75);
 
-            margin-bottom:
-                8px;
+    border:
+        1px solid var(--border);
 
-        }
+    border-radius: 10px;
 
+    font-size: .81rem;
 
-        .contact-card p {
+    transition: .25s;
 
-            color:
-                var(--muted);
+}
 
-        }
 
+.contact-links a:hover {
 
-        .contact-links {
+    color: var(--blue-bright);
 
-            display:
-                grid;
+    border-color:
+        var(--blue);
 
-            gap:
-                10px;
+    box-shadow:
+        0 0 20px rgba(56,189,248,.08);
 
-            margin-top:
-                18px;
+}
 
-        }
 
+/* =====================================================
+   FOOTER
+===================================================== */
 
-        .contact-links a {
+footer {
 
-            padding:
-                11px 13px;
+    padding: 30px 0 70px;
 
-            background:
-                #0a1828;
+    border-top:
+        1px solid var(--border);
 
-            border:
-                1px solid var(--border);
+    color: var(--muted);
 
-            border-radius:
-                10px;
+    text-align: center;
 
-            font-size:
-                0.82rem;
+    font-size: .74rem;
 
-        }
+}
 
 
-        .contact-links a:hover {
+/* =====================================================
+   IMAGE MODAL
+===================================================== */
 
-            color:
-                var(--blue);
+.modal {
 
-            border-color:
-                var(--blue);
+    position: fixed;
 
-        }
+    inset: 0;
 
+    display: none;
 
+    align-items: center;
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+    justify-content: center;
 
-        footer {
+    padding: 25px;
 
-            padding:
-                30px 0 70px;
+    background:
+        rgba(1,4,10,.94);
 
-            border-top:
-                1px solid var(--border);
+    z-index: 200;
 
-            color:
-                var(--muted);
+}
 
-            text-align:
-                center;
 
-            font-size:
-                0.75rem;
+.modal.open {
 
-        }
+    display: flex;
 
+}
 
 
-        /* =====================================================
-           IMAGE MODAL
-        ===================================================== */
+.modal img {
 
-        .modal {
+    max-width: 95vw;
 
-            position:
-                fixed;
+    max-height: 88vh;
 
-            inset:
-                0;
+    border-radius: 12px;
 
-            display:
-                none;
+    border:
+        1px solid rgba(56,189,248,.4);
 
-            align-items:
-                center;
+    box-shadow:
+        0 0 70px rgba(56,189,248,.15);
 
-            justify-content:
-                center;
+}
 
-            padding:
-                25px;
 
-            background:
-                rgba(1,7,14,0.9);
+.close {
 
-            z-index:
-                200;
+    position: fixed;
 
-        }
+    top: 18px;
 
+    right: 25px;
 
-        .modal.open {
+    border: none;
 
-            display:
-                flex;
+    background: none;
 
-        }
+    color: white;
 
+    font-size: 2.2rem;
 
-        .modal img {
+    cursor: pointer;
 
-            max-width:
-                95vw;
+}
 
-            max-height:
-                88vh;
 
-            border-radius:
-                12px;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-            border:
-                1px solid var(--border);
+@media(max-width:950px) {
 
-        }
+    .hero-grid,
+    .case-study,
+    .contact-grid {
 
+        grid-template-columns: 1fr;
 
-        .close {
+    }
 
-            position:
-                fixed;
 
-            top:
-                18px;
+    .profile-area {
 
-            right:
-                25px;
+        justify-content: flex-start;
 
-            border:
-                none;
+        order: -1;
 
-            background:
-                none;
+    }
 
-            color:
-                white;
 
-            font-size:
-                2.2rem;
+    .domain-grid {
 
-            cursor:
-                pointer;
+        grid-template-columns:
+            repeat(2,1fr);
 
-        }
+    }
 
 
+    .projects {
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        grid-template-columns:
+            repeat(2,1fr);
 
-        @media(max-width:950px) {
+    }
 
-            .hero-grid,
-            .case-study,
-            .contact-grid {
 
-                grid-template-columns:
-                    1fr;
+    .stats {
 
-            }
+        grid-template-columns:
+            repeat(2,1fr);
 
+    }
 
-            .profile-area {
+}
 
-                justify-content:
-                    flex-start;
 
-                order:
-                    -1;
+@media(max-width:680px) {
 
-            }
+    .container {
 
+        width:
+            calc(100% - 24px);
 
-            .domain-grid {
+    }
 
-                grid-template-columns:
-                    repeat(2,1fr);
 
-            }
+    .nav-links {
 
+        display: none;
 
-            .issue-grid {
+    }
 
-                grid-template-columns:
-                    repeat(2,1fr);
 
-            }
+    .hero {
 
+        padding-top: 55px;
 
-            .projects {
+    }
 
-                grid-template-columns:
-                    repeat(2,1fr);
 
-            }
+    .domain-grid,
+    .projects,
+    .two-column {
 
+        grid-template-columns: 1fr;
 
-            .stats {
+    }
 
-                grid-template-columns:
-                    repeat(2,1fr);
 
-            }
+    .stats {
 
-        }
+        grid-template-columns:
+            repeat(2,1fr);
 
+    }
 
-        @media(max-width:680px) {
 
-            .container {
+    section {
 
-                width:
-                    calc(100% - 24px);
+        padding: 55px 0;
 
-            }
+    }
 
 
-            .nav-links {
+    h1 {
 
-                display:
-                    none;
+        font-size: 2.9rem;
 
-            }
+    }
 
 
-            .hero {
+    .profile-image {
 
-                padding-top:
-                    50px;
+        width: 230px;
 
-            }
+        height: 230px;
 
+    }
 
-            .domain-grid,
-            .projects,
-            .two-column {
+}
 
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .issue-grid {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .stats {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-
-            }
-
-
-            section {
-
-                padding:
-                    55px 0;
-
-            }
-
-
-            h1 {
-
-                font-size:
-                    2.8rem;
-
-            }
-
-
-            .issue-section {
-
-                padding:
-                    22px;
-
-            }
-
-        }
-
-
-    </style>
+</style>
 
 </head>
 
 
-
 <body>
-
 
 
 <!-- =====================================================
@@ -2157,50 +1867,36 @@
 
 <nav>
 
-    <div class="container nav-inner">
+<div class="container nav-inner">
 
-        <a href="#home"
-           class="brand">
-
-            Nithish<span>.</span>
-
-        </a>
+<a href="#home" class="brand">
+Nithish<span>.</span>
+</a>
 
 
-        <div class="nav-links">
+<div class="nav-links">
 
-            <a href="#about">
-                Profile
-            </a>
+<a href="#about">Profile</a>
 
-            <a href="#experience">
-                Experience
-            </a>
+<a href="#experience">Experience</a>
 
-            <a href="#projects">
-                Projects
-            </a>
+<a href="#projects">Projects</a>
 
-            <a href="#skills">
-                Skills
-            </a>
+<a href="#skills">Skills</a>
 
-            <a href="#contact">
-                Contact
-            </a>
+<a href="#contact">Contact</a>
 
-            <a
-                class="nav-resume"
-                href="assets/Resume.pdf"
-                target="_blank">
+<a class="nav-resume"
+   href="assets/Resume.pdf"
+   target="_blank">
 
-                Resume
+Resume
 
-            </a>
+</a>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </nav>
 
@@ -2209,198 +1905,219 @@
 <main id="home">
 
 
-
 <!-- =====================================================
      HERO
 ===================================================== -->
 
 <section class="hero">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-grid">
+<div class="hero-grid">
 
 
-            <div>
+<div>
 
-                <div class="eyebrow">
+<div class="eyebrow">
 
-                    Investment Banking
-                    •
-                    Capital Markets
-                    •
-                    FinTech
-                    •
-                    BI
+Investment Banking
+•
+Capital Markets
+•
+FinTech
+•
+Business Intelligence
 
-                </div>
+</div>
 
 
-                <h1>
+<h1>
 
-                    Nithish Kumar
-                    <span>S</span>
+Nithish Kumar
+<span>S</span>
 
-                </h1>
+</h1>
 
 
-                <h2>
+<h2>
 
-                    Investment Banking Operations
-                    &
-                    Business Intelligence Professional
+Investment Banking Operations
+&
+Business Intelligence Professional
 
-                </h2>
+</h2>
 
 
-                <p class="hero-description">
+<p class="hero-description">
 
-                    Banking and financial-services professional
-                    combining Investment Banking Operations,
-                    Capital Markets, Registry & RTA,
-                    Repository Operations, Banking Alliances,
-                    Payment Operations and Business Intelligence.
+Banking and financial-services professional combining
+Investment Banking Operations, Capital Markets,
+Registry & RTA, Repository Operations,
+Banking Alliances, Payment Operations
+and Business Intelligence.
 
-                    Experienced in Power BI, DAX, Advanced Excel,
-                    Power Query, VBA automation, MIS reporting,
-                    settlement, reconciliation, KYC and
-                    operational analytics.
+Experienced in Power BI, DAX, Advanced Excel,
+Power Query, VBA automation, MIS reporting,
+settlement, reconciliation, KYC and operational analytics.
 
-                </p>
+</p>
 
 
-                <div class="hero-actions">
+<div class="hero-actions">
 
 
-                    <a
-                        class="btn btn-primary"
-                        href="#projects">
+<a class="btn btn-primary"
+   href="#projects">
 
-                        Explore Portfolio →
+Explore Portfolio →
 
-                    </a>
+</a>
 
 
-                    <a
-                        class="btn"
-                        href="assets/Resume.pdf"
-                        target="_blank">
+<a class="btn"
+   href="assets/Resume.pdf"
+   target="_blank">
 
-                        View Resume
+View Resume
 
-                    </a>
+</a>
 
 
-                    <a
-                        class="btn"
-                        href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
-                        target="_blank">
+<a class="btn"
+   href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
+   target="_blank">
 
-                        LinkedIn
+LinkedIn
 
-                    </a>
+</a>
 
 
-                    <a
-                        class="btn"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<a class="btn"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                        GitHub
+GitHub
 
-                    </a>
+</a>
 
-                </div>
 
-            </div>
+</div>
 
+</div>
 
 
-            <div class="profile-area">
 
-                <div>
+<div class="profile-area">
 
-                    <img
-                        src="assets/profile.jpg"
-                        class="profile-image"
-                        alt="Nithish Kumar S">
+<div>
 
-                    <div class="profile-caption">
+<img src="assets/profile.jpg"
+     class="profile-image"
+     alt="Nithish Kumar S">
 
-                        Dubai, UAE
-                        •
-                        Banking & Financial Services
+<div class="profile-caption">
 
-                    </div>
+Dubai, UAE
+•
+Banking & Financial Services
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
+</div>
 
 
-        <!-- HERO STATS -->
 
-        <div class="stats">
+<!-- =====================================================
+     CAPITAL MARKETS STATISTICS
+===================================================== -->
 
+<div class="stats">
 
-            <div class="stat">
 
-                <strong>
-                    4+ Years
-                </strong>
+<div class="stat">
 
-                <span>
-                    Banking & Financial Operations
-                </span>
+<strong>25</strong>
 
-            </div>
+<span>
+Fixed-Price IPOs
+</span>
 
+</div>
 
-            <div class="stat">
 
-                <strong>
-                    15+
-                </strong>
+<div class="stat">
 
-                <span>
-                    Analytics Projects
-                </span>
+<strong>17</strong>
 
-            </div>
+<span>
+Book-Built IPOs
+</span>
 
+</div>
 
-            <div class="stat">
 
-                <strong>
-                    RTA + Repository
-                </strong>
+<div class="stat">
 
-                <span>
-                    Capital Markets Operations
-                </span>
+<strong>42</strong>
 
-            </div>
+<span>
+Total IPOs
+</span>
 
+</div>
 
-            <div class="stat">
 
-                <strong>
-                    Power BI + Excel
-                </strong>
+<div class="stat">
 
-                <span>
-                    Reporting & Automation
-                </span>
+<strong>25</strong>
 
-            </div>
+<span>
+Rights Issues
+</span>
 
+</div>
 
-        </div>
 
-    </div>
+<div class="stat">
+
+<strong>6</strong>
+
+<span>
+NCD & Bond Issues
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>2</strong>
+
+<span>
+Private Placements
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>75</strong>
+
+<span>
+Total Issues Handled
+</span>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -2412,282 +2129,133 @@
 
 <section id="about">
 
-    <div class="container">
+<div class="container">
 
+<div class="section-head">
 
-        <div class="section-head">
+<div class="section-label">
+Professional Positioning
+</div>
 
-            <div class="section-label">
-                Professional Positioning
-            </div>
+<h2 class="section-title">
 
-            <h2 class="section-title">
+Where financial operations
+meets data intelligence.
 
-                Where financial operations
-                meets data intelligence.
+</h2>
 
-            </h2>
+<p class="section-description">
 
+My profile combines financial-services operations
+with analytics and automation.
 
-            <p class="section-description">
+I understand the business process,
+validate the underlying data,
+control operational workflows and
+convert information into management-ready insights.
 
-                My profile combines financial-services operations
-                with analytics and automation.
+</p>
 
-                I understand the business process,
-                validate the underlying data,
-                control operational workflows and
-                convert information into management-ready insights.
+</div>
 
-            </p>
 
-        </div>
 
+<div class="domain-grid">
 
 
-        <!-- PROFESSIONAL DOMAINS -->
+<article class="domain-card">
 
-        <div class="domain-grid">
+<div class="domain-number">
+01
+</div>
 
+<h3>
+Investment Banking & Capital Markets
+</h3>
 
-            <article class="domain-card">
+<p>
 
-                <div class="domain-number">
-                    01
-                </div>
+IPO processing, Rights Issues,
+Buybacks, Listing Offers,
+Call Money, Corporate Actions,
+settlement and reconciliation.
 
-                <h3>
-                    Investment Banking & Capital Markets
-                </h3>
+</p>
 
-                <p>
+</article>
 
-                    IPO processing, Rights Issues,
-                    Buybacks, Listing Offers,
-                    Call Money, Corporate Actions,
-                    settlement and reconciliation.
 
-                </p>
 
-            </article>
+<article class="domain-card">
 
+<div class="domain-number">
+02
+</div>
 
+<h3>
+Registry & Repository
+</h3>
 
-            <article class="domain-card">
+<p>
 
-                <div class="domain-number">
-                    02
-                </div>
+RTA operations, KYC checks,
+customer-record validation,
+bank-detail verification,
+penny-drop validation and quality control.
 
-                <h3>
-                    Registry & Repository
-                </h3>
+</p>
 
-                <p>
+</article>
 
-                    RTA operations, KYC checks,
-                    customer-record validation,
-                    bank-detail verification,
-                    penny-drop validation and quality control.
 
-                </p>
 
-            </article>
+<article class="domain-card">
 
+<div class="domain-number">
+03
+</div>
 
+<h3>
+Banking Alliances & FinTech
+</h3>
 
-            <article class="domain-card">
+<p>
 
-                <div class="domain-number">
-                    03
-                </div>
+Banking partner coordination,
+PSP/TSP interaction,
+merchant onboarding,
+documentation and payment operations.
 
-                <h3>
-                    Banking Alliances & FinTech
-                </h3>
+</p>
 
-                <p>
+</article>
 
-                    Banking partner coordination,
-                    PSP/TSP interaction,
-                    merchant onboarding,
-                    documentation and payment operations.
 
-                </p>
 
-            </article>
+<article class="domain-card">
 
+<div class="domain-number">
+04
+</div>
 
+<h3>
+Business Intelligence
+</h3>
 
-            <article class="domain-card">
+<p>
 
-                <div class="domain-number">
-                    04
-                </div>
+Power BI, DAX, Power Query,
+Advanced Excel, VBA,
+data modelling, MIS and KPI reporting.
 
-                <h3>
-                    Business Intelligence
-                </h3>
+</p>
 
-                <p>
+</article>
 
-                    Power BI, DAX, Power Query,
-                    Advanced Excel, VBA,
-                    data modelling, MIS and KPI reporting.
 
-                </p>
+</div>
 
-            </article>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             NEW ISSUE STATISTICS
-        ================================================== -->
-
-        <div class="issue-section">
-
-
-            <div class="issue-header">
-
-                <div>
-
-                    <div class="section-label">
-                        Capital Markets Track Record
-                    </div>
-
-                    <div class="issue-title">
-                        IPO & Securities Issues Handled
-                    </div>
-
-                    <div class="issue-subtitle">
-
-                        Demonstrated exposure to IPO processing,
-                        Rights Issues, NCDs, Bonds and Private Placements.
-
-                    </div>
-
-                </div>
-
-
-                <div class="issue-total">
-
-                    <strong>
-                        75
-                    </strong>
-
-                    <span>
-                        Total Issues Handled
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="issue-grid">
-
-
-                <div class="issue-card">
-
-                    <strong>
-                        25
-                    </strong>
-
-                    <span>
-                        Fixed-Price IPOs
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card">
-
-                    <strong>
-                        17
-                    </strong>
-
-                    <span>
-                        Book-Built IPOs
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card highlight">
-
-                    <strong>
-                        42
-                    </strong>
-
-                    <span>
-                        Total IPOs
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card">
-
-                    <strong>
-                        25
-                    </strong>
-
-                    <span>
-                        Rights Issues
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card">
-
-                    <strong>
-                        6
-                    </strong>
-
-                    <span>
-                        NCD & Bond Issues
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card">
-
-                    <strong>
-                        2
-                    </strong>
-
-                    <span>
-                        Private Placements
-                    </span>
-
-                </div>
-
-
-                <div class="issue-card highlight">
-
-                    <strong>
-                        75
-                    </strong>
-
-                    <span>
-                        Total Issues Handled
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -2699,260 +2267,231 @@
 
 <section id="experience">
 
-    <div class="container">
+<div class="container">
 
+<div class="section-head">
 
-        <div class="section-head">
+<div class="section-label">
+Career
+</div>
 
-            <div class="section-label">
-                Career
-            </div>
+<h2 class="section-title">
+Professional Experience
+</h2>
 
-            <h2 class="section-title">
-                Professional Experience
-            </h2>
+<p class="section-description">
 
-            <p class="section-description">
+Experience across Banking Alliances,
+FinTech, Investment Banking Operations,
+Registry & RTA and Repository environments.
 
-                Experience across Banking Alliances,
-                FinTech, Investment Banking Operations,
-                Registry & RTA and Repository environments.
+</p>
 
-            </p>
+</div>
 
-        </div>
 
 
+<div class="timeline">
 
-        <div class="timeline">
 
+<article class="experience">
 
-            <!-- PRIMASOFT -->
+<span class="timeline-dot"></span>
 
-            <article class="experience">
+<div class="experience-card">
 
-                <span class="timeline-dot"></span>
+<div class="experience-header">
 
+<div>
 
-                <div class="experience-card">
+<h3>
+Senior Banking Alliance Executive
+</h3>
 
+<div class="company">
+Primasoft Technology EST
+</div>
 
-                    <div class="experience-header">
+</div>
 
-                        <div>
+<div class="date">
+Oct 2025 – Present
+</div>
 
-                            <h3>
-                                Senior Banking Alliance Executive
-                            </h3>
+</div>
 
-                            <div class="company">
-                                Primasoft Technology EST
-                            </div>
 
-                        </div>
+<ul>
 
+<li>
+Manage banking-partner, merchant and
+payment-stakeholder coordination supporting
+onboarding, activation and ongoing operations.
+</li>
 
-                        <div class="date">
-                            Oct 2025 – Present
-                        </div>
+<li>
+Lead merchant onboarding through KYC
+document review, corporate-record validation,
+banking-information checks and compliance requirements.
+</li>
 
-                    </div>
+<li>
+Coordinate with PSPs, TSPs, merchants and
+internal teams for payment-gateway integration
+and merchant activation.
+</li>
 
+<li>
+Review agreements and supporting documents
+for completeness, accuracy and policy alignment.
+</li>
 
-                    <ul>
+<li>
+Prepare Excel-based MIS reports and operational
+trackers for onboarding status, pending actions
+and partner activities.
+</li>
 
-                        <li>
-                            Manage banking-partner, merchant and
-                            payment-stakeholder coordination supporting
-                            onboarding, activation and ongoing operations.
-                        </li>
+<li>
+Use Power BI, Advanced Excel, Power Query and
+VBA to improve reporting and operational analysis.
+</li>
 
+</ul>
 
-                        <li>
-                            Lead merchant onboarding through KYC
-                            document review, corporate-record validation,
-                            banking-information checks and compliance requirements.
-                        </li>
+</div>
 
+</article>
 
-                        <li>
-                            Coordinate with PSPs, TSPs, merchants and
-                            internal teams for payment-gateway integration
-                            and merchant activation.
-                        </li>
 
 
-                        <li>
-                            Review agreements and supporting documents
-                            for completeness, accuracy and policy alignment.
-                        </li>
+<article class="experience">
 
+<span class="timeline-dot"></span>
 
-                        <li>
-                            Prepare Excel-based MIS reports and operational
-                            trackers for onboarding status, pending actions
-                            and partner activities.
-                        </li>
+<div class="experience-card">
 
+<div class="experience-header">
 
-                        <li>
-                            Use Power BI, Advanced Excel, Power Query and
-                            VBA to improve reporting and operational analysis.
-                        </li>
+<div>
 
-                    </ul>
+<h3>
+Senior Assistant / Executive –
+Registry & RTA
+</h3>
 
-                </div>
+<div class="company">
+Cameo Corporate Services Ltd
+</div>
 
-            </article>
+</div>
 
+<div class="date">
+Oct 2023 – Aug 2025
+</div>
 
+</div>
 
-            <!-- CAMEO -->
 
-            <article class="experience">
+<ul>
 
-                <span class="timeline-dot"></span>
+<li>
+Supported investment banking and
+capital-markets operations covering IPOs,
+Rights Issues, Buybacks, Listing Offers,
+Call Money and Corporate Actions.
+</li>
 
+<li>
+Processed transaction and customer-fund
+activities with focus on settlement,
+reconciliation and process control.
+</li>
 
-                <div class="experience-card">
+<li>
+Validated transaction records,
+investigated discrepancies and coordinated
+with internal teams, customers, banks and
+financial institutions.
+</li>
 
+<li>
+Prepared MIS reports and operational summaries
+for performance monitoring and management review.
+</li>
 
-                    <div class="experience-header">
+<li>
+Worked within an RTA environment with exposure
+to securities and capital-markets operations.
+</li>
 
-                        <div>
+</ul>
 
-                            <h3>
-                                Senior Assistant / Executive –
-                                Registry & RTA
-                            </h3>
+</div>
 
-                            <div class="company">
-                                Cameo Corporate Services Ltd
-                            </div>
+</article>
 
-                        </div>
 
 
-                        <div class="date">
-                            Oct 2023 – Aug 2025
-                        </div>
+<article class="experience">
 
-                    </div>
+<span class="timeline-dot"></span>
 
+<div class="experience-card">
 
-                    <ul>
+<div class="experience-header">
 
-                        <li>
-                            Supported investment banking and
-                            capital-markets operations covering IPOs,
-                            Rights Issues, Buybacks, Listing Offers,
-                            Call Money and Corporate Actions.
-                        </li>
+<div>
 
+<h3>
+Executive – Operations | Repository
+</h3>
 
-                        <li>
-                            Processed transaction and customer-fund
-                            activities with focus on settlement,
-                            reconciliation and process control.
-                        </li>
+<div class="company">
+Computer Age Management Services Ltd
+</div>
 
+</div>
 
-                        <li>
-                            Validated transaction records,
-                            investigated discrepancies and coordinated
-                            with internal teams, customers, banks and
-                            financial institutions.
-                        </li>
+<div class="date">
+Apr 2022 – Sep 2023
+</div>
 
+</div>
 
-                        <li>
-                            Prepared MIS reports and operational summaries
-                            for performance monitoring and management review.
-                        </li>
 
+<ul>
 
-                        <li>
-                            Worked within an RTA environment with exposure
-                            to securities and capital-markets operations.
-                        </li>
+<li>
+Performed KYC checks, customer-record updates,
+bank-detail verification and penny-drop validation.
+</li>
 
-                    </ul>
+<li>
+Prepared MIS reports, campaign reports,
+operational dashboards and data-quality summaries.
+</li>
 
-                </div>
+<li>
+Conducted quality checks and final validation
+to maintain processing standards.
+</li>
 
-            </article>
+<li>
+Coordinated with stakeholders and team members
+to resolve operational data issues.
+</li>
 
+</ul>
 
+</div>
 
-            <!-- CAMS -->
+</article>
 
-            <article class="experience">
 
-                <span class="timeline-dot"></span>
+</div>
 
-
-                <div class="experience-card">
-
-
-                    <div class="experience-header">
-
-                        <div>
-
-                            <h3>
-                                Executive – Operations
-                                | Repository
-                            </h3>
-
-                            <div class="company">
-                                Computer Age Management Services Ltd
-                            </div>
-
-                        </div>
-
-
-                        <div class="date">
-                            Apr 2022 – Sep 2023
-                        </div>
-
-                    </div>
-
-
-                    <ul>
-
-                        <li>
-                            Performed KYC checks, customer-record updates,
-                            bank-detail verification and penny-drop validation.
-                        </li>
-
-
-                        <li>
-                            Prepared MIS reports, campaign reports,
-                            operational dashboards and data-quality summaries.
-                        </li>
-
-
-                        <li>
-                            Conducted quality checks and final validation
-                            to maintain processing standards.
-                        </li>
-
-
-                        <li>
-                            Coordinated with stakeholders and team members
-                            to resolve operational data issues.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -2964,141 +2503,84 @@
 
 <section id="skills">
 
-    <div class="container">
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+Capabilities
+</div>
+
+<h2 class="section-title">
+Core Skills
+</h2>
+
+<p class="section-description">
+A combined financial-operations and analytics toolkit.
+</p>
+
+</div>
 
 
-        <div class="section-head">
+<div class="skills">
 
-            <div class="section-label">
-                Capabilities
-            </div>
+<span class="skill">Investment Banking Operations</span>
 
-            <h2 class="section-title">
-                Core Skills
-            </h2>
+<span class="skill">Capital Markets Operations</span>
 
-            <p class="section-description">
-                A combined financial-operations and analytics toolkit.
-            </p>
+<span class="skill">IPO Processing</span>
 
-        </div>
+<span class="skill">Rights Issues</span>
 
+<span class="skill">Buybacks</span>
 
-        <div class="skills">
+<span class="skill">Corporate Actions</span>
 
+<span class="skill">RTA Operations</span>
 
-            <span class="skill">
-                Investment Banking Operations
-            </span>
+<span class="skill">Repository Operations</span>
 
-            <span class="skill">
-                Capital Markets Operations
-            </span>
+<span class="skill">Settlement</span>
 
-            <span class="skill">
-                IPO Processing
-            </span>
+<span class="skill">Reconciliation</span>
 
-            <span class="skill">
-                Rights Issues
-            </span>
+<span class="skill">KYC / AML</span>
 
-            <span class="skill">
-                Buybacks
-            </span>
+<span class="skill">Banking Alliances</span>
 
-            <span class="skill">
-                Corporate Actions
-            </span>
+<span class="skill">Merchant Onboarding</span>
 
-            <span class="skill">
-                RTA Operations
-            </span>
+<span class="skill">PSP / TSP Coordination</span>
 
-            <span class="skill">
-                Repository Operations
-            </span>
+<span class="skill">Payment Gateway Operations</span>
 
-            <span class="skill">
-                Settlement
-            </span>
+<span class="skill">Power BI</span>
 
-            <span class="skill">
-                Reconciliation
-            </span>
+<span class="skill">DAX</span>
 
-            <span class="skill">
-                KYC / AML
-            </span>
+<span class="skill">Power Query</span>
 
-            <span class="skill">
-                Banking Alliances
-            </span>
+<span class="skill">Advanced Excel</span>
 
-            <span class="skill">
-                Merchant Onboarding
-            </span>
+<span class="skill">VBA Macros</span>
 
-            <span class="skill">
-                PSP / TSP Coordination
-            </span>
+<span class="skill">Data Modelling</span>
 
-            <span class="skill">
-                Payment Gateway Operations
-            </span>
+<span class="skill">SQL – Basic</span>
 
-            <span class="skill">
-                Power BI
-            </span>
+<span class="skill">MIS Reporting</span>
 
-            <span class="skill">
-                DAX
-            </span>
+<span class="skill">KPI Reporting</span>
 
-            <span class="skill">
-                Power Query
-            </span>
+<span class="skill">Process Automation</span>
 
-            <span class="skill">
-                Advanced Excel
-            </span>
+<span class="skill">Data Validation</span>
 
-            <span class="skill">
-                VBA Macros
-            </span>
+<span class="skill">Stakeholder Management</span>
 
-            <span class="skill">
-                Data Modelling
-            </span>
+</div>
 
-            <span class="skill">
-                SQL – Basic
-            </span>
-
-            <span class="skill">
-                MIS Reporting
-            </span>
-
-            <span class="skill">
-                KPI Reporting
-            </span>
-
-            <span class="skill">
-                Process Automation
-            </span>
-
-            <span class="skill">
-                Data Validation
-            </span>
-
-            <span class="skill">
-                Stakeholder Management
-            </span>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -3110,1051 +2592,882 @@
 
 <section id="projects">
 
-    <div class="container">
+<div class="container">
 
+<div class="section-head">
 
-        <div class="section-head">
+<div class="section-label">
+Analytics Portfolio
+</div>
 
-            <div class="section-label">
-                Analytics Portfolio
-            </div>
+<h2 class="section-title">
+Dashboard Projects
+</h2>
 
-            <h2 class="section-title">
-                Dashboard Projects
-            </h2>
+<p class="section-description">
 
-            <p class="section-description">
+Business intelligence projects covering
+finance, banking, FinTech, sales,
+operations, HR and automation.
 
-                Business intelligence projects covering
-                finance, banking, FinTech, sales,
-                operations, HR and automation.
+</p>
 
-                <br><br>
+</div>
 
-                <strong style="color:var(--gold);">
-                    New projects can be added without modifying
-                    the overall portfolio structure.
-                </strong>
 
-            </p>
+<div class="filters">
 
-        </div>
+<button class="filter active"
+        data-filter="all">
+All
+</button>
 
+<button class="filter"
+        data-filter="finance">
+Finance & Banking
+</button>
 
+<button class="filter"
+        data-filter="sales">
+Sales & E-Commerce
+</button>
 
-        <!-- FILTERS -->
+<button class="filter"
+        data-filter="operations">
+Operations
+</button>
 
-        <div class="filters">
+<button class="filter"
+        data-filter="hr">
+HR & Productivity
+</button>
 
+<button class="filter"
+        data-filter="specialized">
+Specialized
+</button>
 
-            <button
-                class="filter active"
-                data-filter="all">
+<button class="filter"
+        data-filter="automation">
+Automation
+</button>
 
-                All
+</div>
 
-            </button>
 
 
-            <button
-                class="filter"
-                data-filter="finance">
+<div class="projects">
 
-                Finance & Banking
 
-            </button>
+<!-- =================================================
+     FINANCE
+================================================= -->
 
 
-            <button
-                class="filter"
-                data-filter="sales">
+<article class="project"
+         data-category="finance">
 
-                Sales & E-Commerce
+<div class="project-image">
 
-            </button>
+<img src="assets/projects/PAGE1-ExecutiveDashboard.png"
+     alt="Corporate Finance Dashboard">
 
+</div>
 
-            <button
-                class="filter"
-                data-filter="operations">
+<div class="project-content">
 
-                Operations
+<div class="project-category">
+Finance & Banking
+</div>
 
-            </button>
+<h3>
+Corporate Finance,
+Budget & Intelligence
+</h3>
 
+<p>
 
-            <button
-                class="filter"
-                data-filter="hr">
+Four-page executive dashboard
+covering revenue, profit,
+budget utilization, cost control
+and business drivers.
 
-                HR & Productivity
+</p>
 
-            </button>
+<div class="technology">
 
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
+<span>Star Schema</span>
 
-            <button
-                class="filter"
-                data-filter="specialized">
+</div>
 
-                Specialized
+<a class="project-link"
+   href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard"
+   target="_blank">
 
-            </button>
+View Repository →
 
+</a>
 
-            <button
-                class="filter"
-                data-filter="automation">
+</div>
 
-                Automation
+</article>
 
-            </button>
 
 
-        </div>
+<article class="project"
+         data-category="finance">
 
+<div class="project-image">
 
+<img src="assets/projects/imagesbanking_dashboard.png"
+     alt="Banking Operations Dashboard">
 
-        <div class="projects">
+</div>
 
+<div class="project-content">
 
+<div class="project-category">
+Finance & Banking
+</div>
 
-            <!-- =================================================
-                 FINANCE
-            ================================================== -->
+<h3>
+Banking Operations Dashboard
+</h3>
 
+<p>
 
-            <article
-                class="project"
-                data-category="finance">
+Banking operational analytics
+covering transactions,
+performance, liquidity and
+management KPIs.
 
+</p>
 
-                <div class="project-image">
+<div class="technology">
 
-                    <img
-                        src="assets/projects/PAGE1-ExecutiveDashboard.png"
-                        alt="Corporate Finance Dashboard">
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
-                </div>
+</div>
 
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                <div class="project-content">
+View GitHub →
 
-                    <div class="project-category">
-                        Finance & Banking
-                    </div>
+</a>
 
+</div>
 
-                    <h3>
-                        Corporate Finance,
-                        Budget & Intelligence
-                    </h3>
+</article>
 
 
-                    <p>
 
-                        Four-page executive dashboard
-                        covering revenue, profit,
-                        budget utilization, cost control
-                        and business drivers.
+<article class="project"
+         data-category="finance">
 
-                    </p>
+<div class="project-image">
 
+<img src="assets/projects/imagespaymentgatway_dashboard.png"
+     alt="Payment Gateway Dashboard">
 
-                    <div class="technology">
+</div>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
-                        <span>Star Schema</span>
+<div class="project-content">
 
-                    </div>
+<div class="project-category">
+FinTech
+</div>
 
+<h3>
+Payment Gateway Analysis
+</h3>
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops/FinanceBudget-Analytics-Dashboard"
-                        target="_blank">
+<p>
 
-                        View Repository →
+Payment transaction analysis
+covering success rates,
+failures, trends and
+operational performance.
 
-                    </a>
+</p>
 
-                </div>
+<div class="technology">
 
-            </article>
+<span>Power BI</span>
+<span>DAX</span>
+<span>Payment Ops</span>
 
+</div>
 
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-            <article
-                class="project"
-                data-category="finance">
+View GitHub →
 
+</a>
 
-                <div class="project-image">
+</div>
 
-                    <img
-                        src="assets/projects/imagesbanking_dashboard.png"
-                        alt="Banking Operations Dashboard">
+</article>
 
-                </div>
 
 
-                <div class="project-content">
+<!-- =================================================
+     SALES
+================================================= -->
 
-                    <div class="project-category">
-                        Finance & Banking
-                    </div>
 
+<article class="project"
+         data-category="sales">
 
-                    <h3>
-                        Banking Operations Dashboard
-                    </h3>
+<div class="project-image">
 
+<img src="assets/projects/E - Commerce Analytics Dashbooards.png"
+     alt="E-Commerce Analytics">
 
-                    <p>
+</div>
 
-                        Banking operational analytics
-                        covering transactions,
-                        performance, liquidity and
-                        management KPIs.
+<div class="project-content">
 
-                    </p>
+<div class="project-category">
+Sales & E-Commerce
+</div>
 
+<h3>
+E-Commerce Analytics
+</h3>
 
-                    <div class="technology">
+<p>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
+Sales, customer, orders,
+fulfillment, payments and
+profitability analytics.
 
-                    </div>
+</p>
 
+<div class="technology">
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<span>Power BI</span>
+<span>DAX</span>
+<span>Power Query</span>
 
-                        View GitHub →
+</div>
 
-                    </a>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                </div>
+View GitHub →
 
-            </article>
+</a>
 
+</div>
 
+</article>
 
-            <article
-                class="project"
-                data-category="finance">
 
 
-                <div class="project-image">
+<article class="project"
+         data-category="sales">
 
-                    <img
-                        src="assets/projects/imagespaymentgatway_dashboard.png"
-                        alt="Payment Gateway Dashboard">
+<div class="project-image">
 
-                </div>
+<img src="assets/projects/imageretailsales_dashboard.png"
+     alt="Retail Sales Dashboard">
 
+</div>
 
-                <div class="project-content">
+<div class="project-content">
 
-                    <div class="project-category">
-                        FinTech
-                    </div>
+<div class="project-category">
+Sales & E-Commerce
+</div>
 
+<h3>
+Retail Sales Analytics
+</h3>
 
-                    <h3>
-                        Payment Gateway Analysis
-                    </h3>
+<p>
 
+Regional sales,
+product performance,
+store analysis and
+customer trends.
 
-                    <p>
+</p>
 
-                        Payment transaction analysis
-                        covering success rates,
-                        failures, trends and
-                        operational performance.
+<div class="technology">
 
-                    </p>
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
+</div>
 
-                    <div class="technology">
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Payment Ops</span>
+View GitHub →
 
-                    </div>
+</a>
 
+</div>
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+</article>
 
-                        View GitHub →
 
-                    </a>
 
-                </div>
+<article class="project"
+         data-category="sales">
 
-            </article>
+<div class="project-image">
 
+<img src="assets/projects/imagessales_dashboard.png"
+     alt="Sales Analytics Dashboard">
 
+</div>
 
-            <!-- =================================================
-                 SALES
-            ================================================== -->
+<div class="project-content">
 
+<div class="project-category">
+Sales Analytics
+</div>
 
-            <article
-                class="project"
-                data-category="sales">
+<h3>
+Sales Analytics Dashboard
+</h3>
 
+<p>
 
-                <div class="project-image">
+Executive sales analysis
+with revenue trends,
+regional performance and
+YoY analysis.
 
-                    <img
-                        src="assets/projects/E - Commerce Analytics Dashbooards.png"
-                        alt="E-Commerce Analytics">
+</p>
 
-                </div>
+<div class="technology">
 
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
-                <div class="project-content">
+</div>
 
-                    <div class="project-category">
-                        Sales & E-Commerce
-                    </div>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
+View GitHub →
 
-                    <h3>
-                        E-Commerce Analytics
-                    </h3>
+</a>
 
+</div>
 
-                    <p>
+</article>
 
-                        Sales, customer, orders,
-                        fulfillment, payments and
-                        profitability analytics.
 
-                    </p>
 
+<!-- =================================================
+     OPERATIONS
+================================================= -->
 
-                    <div class="technology">
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Power Query</span>
+<article class="project"
+         data-category="operations">
 
-                    </div>
+<div class="project-image">
 
+<img src="assets/projects/Page1-Executiveoverview.png"
+     alt="Manufacturing Dashboard">
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+</div>
 
-                        View GitHub →
+<div class="project-content">
 
-                    </a>
+<div class="project-category">
+Operations
+</div>
 
-                </div>
+<h3>
+Manufacturing Operations
+</h3>
 
-            </article>
+<p>
 
+Production, quality,
+inventory and cost
+performance dashboard.
 
+</p>
 
-            <article
-                class="project"
-                data-category="sales">
+<div class="technology">
 
+<span>Power BI</span>
+<span>DAX</span>
+<span>Star Schema</span>
 
-                <div class="project-image">
+</div>
 
-                    <img
-                        src="assets/projects/imageretailsales_dashboard.png"
-                        alt="Retail Sales Dashboard">
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                </div>
+View GitHub →
 
+</a>
 
-                <div class="project-content">
+</div>
 
-                    <div class="project-category">
-                        Sales & E-Commerce
-                    </div>
+</article>
 
 
-                    <h3>
-                        Retail Sales Analytics
-                    </h3>
 
+<article class="project"
+         data-category="operations">
 
-                    <p>
+<div class="project-image">
 
-                        Regional sales,
-                        product performance,
-                        store analysis and
-                        customer trends.
+<img src="assets/projects/imageSupplychainalytics_dashboard.png"
+     alt="Supply Chain Dashboard">
 
-                    </p>
+</div>
 
+<div class="project-content">
 
-                    <div class="technology">
+<div class="project-category">
+Operations
+</div>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
+<h3>
+Supply Chain Analytics
+</h3>
 
-                    </div>
+<p>
 
+Inventory, supplier,
+shipment and logistics
+performance analytics.
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+</p>
 
-                        View GitHub →
+<div class="technology">
 
-                    </a>
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
-                </div>
+</div>
 
-            </article>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
+View GitHub →
 
+</a>
 
-            <article
-                class="project"
-                data-category="sales">
+</div>
 
+</article>
 
-                <div class="project-image">
 
-                    <img
-                        src="assets/projects/imagessales_dashboard.png"
-                        alt="Sales Analytics Dashboard">
 
-                </div>
+<!-- =================================================
+     SPECIALIZED
+================================================= -->
 
 
-                <div class="project-content">
+<article class="project"
+         data-category="specialized">
 
-                    <div class="project-category">
-                        Sales Analytics
-                    </div>
+<div class="project-image">
 
+<img src="assets/projects/Hotel Analytics (1).png"
+     alt="Hotel Analytics Dashboard">
 
-                    <h3>
-                        Sales Analytics Dashboard
-                    </h3>
+</div>
 
+<div class="project-content">
 
-                    <p>
+<div class="project-category">
+Specialized Analytics
+</div>
 
-                        Executive sales analysis
-                        with revenue trends,
-                        regional performance and
-                        YoY analysis.
+<h3>
+Hotel Analytics
+</h3>
 
-                    </p>
+<p>
 
+Occupancy, cancellation,
+ADR, booking trends and
+guest analytics.
 
-                    <div class="technology">
+</p>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
+<div class="technology">
 
-                    </div>
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
+</div>
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                        View GitHub →
+View GitHub →
 
-                    </a>
+</a>
 
-                </div>
+</div>
 
-            </article>
+</article>
 
 
 
-            <!-- =================================================
-                 OPERATIONS
-            ================================================== -->
+<article class="project"
+         data-category="specialized">
 
+<div class="project-image">
 
-            <article
-                class="project"
-                data-category="operations">
+<img src="assets/projects/Population Analytics 1.png"
+     alt="Population Analytics Dashboard">
 
+</div>
 
-                <div class="project-image">
+<div class="project-content">
 
-                    <img
-                        src="assets/projects/Page1-Executiveoverview.png"
-                        alt="Manufacturing Dashboard">
+<div class="project-category">
+Specialized Analytics
+</div>
 
-                </div>
+<h3>
+Population Analytics
+</h3>
 
+<p>
 
-                <div class="project-content">
+Population trends,
+demographics,
+regional growth and
+distribution analytics.
 
-                    <div class="project-category">
-                        Operations
-                    </div>
+</p>
 
+<div class="technology">
 
-                    <h3>
-                        Manufacturing Operations
-                    </h3>
+<span>Power BI</span>
+<span>DAX</span>
+<span>Data Modelling</span>
 
+</div>
 
-                    <p>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                        Production, quality,
-                        inventory and cost
-                        performance dashboard.
+View GitHub →
 
-                    </p>
+</a>
 
+</div>
 
-                    <div class="technology">
+</article>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Star Schema</span>
 
-                    </div>
 
+<article class="project"
+         data-category="specialized">
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<div class="project-image">
 
-                        View GitHub →
+<img src="assets/projects/imagehealthcare_dashboard.png"
+     alt="Hospital Analytics Dashboard">
 
-                    </a>
+</div>
 
-                </div>
+<div class="project-content">
 
-            </article>
+<div class="project-category">
+Specialized Analytics
+</div>
 
+<h3>
+Hospital Analytics
+</h3>
 
+<p>
 
-            <article
-                class="project"
-                data-category="operations">
+Patient admissions,
+hospital operations,
+bed utilization and
+healthcare KPIs.
 
+</p>
 
-                <div class="project-image">
+<div class="technology">
 
-                    <img
-                        src="assets/projects/imageSupplychainalytics_dashboard.png"
-                        alt="Supply Chain Dashboard">
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
-                </div>
+</div>
 
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                <div class="project-content">
+View GitHub →
 
-                    <div class="project-category">
-                        Operations
-                    </div>
+</a>
 
+</div>
 
-                    <h3>
-                        Supply Chain Analytics
-                    </h3>
+</article>
 
 
-                    <p>
 
-                        Inventory, supplier,
-                        shipment and logistics
-                        performance analytics.
+<!-- =================================================
+     HR
+================================================= -->
 
-                    </p>
 
+<article class="project"
+         data-category="hr">
 
-                    <div class="technology">
+<div class="project-image">
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
+<img src="assets/projects/imageshranalytics_dashboard.png"
+     alt="HR Analytics Dashboard">
 
-                    </div>
+</div>
 
+<div class="project-content">
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<div class="project-category">
+HR & Productivity
+</div>
 
-                        View GitHub →
+<h3>
+HR Analytics
+</h3>
 
-                    </a>
+<p>
 
-                </div>
+Workforce demographics,
+attrition, department
+performance and employee
+analytics.
 
-            </article>
+</p>
 
+<div class="technology">
 
+<span>Power BI</span>
+<span>DAX</span>
+<span>Excel</span>
 
-            <!-- =================================================
-                 SPECIALIZED
-            ================================================== -->
+</div>
 
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-            <article
-                class="project"
-                data-category="specialized">
+View GitHub →
 
+</a>
 
-                <div class="project-image">
+</div>
 
-                    <img
-                        src="assets/projects/Hotel Analytics (1).png"
-                        alt="Hotel Analytics Dashboard">
+</article>
 
-                </div>
 
 
-                <div class="project-content">
+<article class="project"
+         data-category="hr">
 
-                    <div class="project-category">
-                        Specialized Analytics
-                    </div>
+<div class="project-image">
 
+<img src="assets/projects/Dashboard For Addendence.png"
+     alt="Attendance Dashboard">
 
-                    <h3>
-                        Hotel Analytics
-                    </h3>
+</div>
 
+<div class="project-content">
 
-                    <p>
+<div class="project-category">
+HR & Productivity
+</div>
 
-                        Occupancy, cancellation,
-                        ADR, booking trends and
-                        guest analytics.
+<h3>
+Attendance Dashboard
+</h3>
 
-                    </p>
+<p>
 
+Attendance,
+leave patterns,
+shifts, overtime and
+workforce monitoring.
 
-                    <div class="technology">
+</p>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
+<div class="technology">
 
-                    </div>
+<span>Excel</span>
+<span>VBA</span>
+<span>Automation</span>
 
+</div>
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
-                        View GitHub →
+View GitHub →
 
-                    </a>
+</a>
 
-                </div>
+</div>
 
-            </article>
+</article>
 
 
 
-            <article
-                class="project"
-                data-category="specialized">
+<article class="project"
+         data-category="hr">
 
+<div class="project-image">
 
-                <div class="project-image">
+<img src="assets/projects/Productivity Dashboard.png"
+     alt="Productivity Dashboard">
 
-                    <img
-                        src="assets/projects/Population Analytics 1.png"
-                        alt="Population Analytics Dashboard">
+</div>
 
-                </div>
+<div class="project-content">
 
+<div class="project-category">
+HR & Productivity
+</div>
 
-                <div class="project-content">
+<h3>
+Productivity Dashboard
+</h3>
 
-                    <div class="project-category">
-                        Specialized Analytics
-                    </div>
+<p>
 
+Employee output,
+task allocation,
+productivity and
+operational efficiency.
 
-                    <h3>
-                        Population Analytics
-                    </h3>
+</p>
 
+<div class="technology">
 
-                    <p>
+<span>Excel</span>
+<span>VBA</span>
+<span>MIS</span>
 
-                        Population trends,
-                        demographics,
-                        regional growth and
-                        distribution analytics.
+</div>
 
-                    </p>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
+View GitHub →
 
-                    <div class="technology">
+</a>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Data Modelling</span>
+</div>
 
-                    </div>
+</article>
 
 
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
 
-                        View GitHub →
+<!-- =================================================
+     AUTOMATION
+================================================= -->
 
-                    </a>
 
-                </div>
+<article class="project"
+         data-category="automation">
 
-            </article>
+<div class="project-image"
+     style="
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     font-size:3rem;
+     font-weight:800;
+     background:
+     radial-gradient(
+        circle,
+        rgba(56,189,248,.15),
+        #050a13
+     );
+     color:#60d8ff;
+     text-shadow:
+     0 0 30px rgba(56,189,248,.8);
+     ">
 
+VBA
 
+</div>
 
-            <article
-                class="project"
-                data-category="specialized">
+<div class="project-content">
 
+<div class="project-category">
+Automation
+</div>
 
-                <div class="project-image">
+<h3>
+Mail Merge Automation
+</h3>
 
-                    <img
-                        src="assets/projects/imagehealthcare_dashboard.png"
-                        alt="Hospital Analytics Dashboard">
+<p>
 
-                </div>
+Excel-to-document automation
+for bulk offer-letter generation
+and operational workflows.
 
+</p>
 
-                <div class="project-content">
+<div class="technology">
 
-                    <div class="project-category">
-                        Specialized Analytics
-                    </div>
+<span>Excel</span>
+<span>VBA</span>
+<span>Mail Merge</span>
 
+</div>
 
-                    <h3>
-                        Hospital Analytics
-                    </h3>
+<a class="project-link"
+   href="https://github.com/nithishibops"
+   target="_blank">
 
+View GitHub →
 
-                    <p>
+</a>
 
-                        Patient admissions,
-                        hospital operations,
-                        bed utilization and
-                        healthcare KPIs.
+</div>
 
-                    </p>
+</article>
 
 
-                    <div class="technology">
+</div>
 
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
-
-                    </div>
-
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
-
-                        View GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =================================================
-                 HR
-            ================================================== -->
-
-
-            <article
-                class="project"
-                data-category="hr">
-
-
-                <div class="project-image">
-
-                    <img
-                        src="assets/projects/imageshranalytics_dashboard.png"
-                        alt="HR Analytics Dashboard">
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        HR & Productivity
-                    </div>
-
-
-                    <h3>
-                        HR Analytics
-                    </h3>
-
-
-                    <p>
-
-                        Workforce demographics,
-                        attrition, department
-                        performance and employee
-                        analytics.
-
-                    </p>
-
-
-                    <div class="technology">
-
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>Excel</span>
-
-                    </div>
-
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
-
-                        View GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <article
-                class="project"
-                data-category="hr">
-
-
-                <div class="project-image">
-
-                    <img
-                        src="assets/projects/Dashboard For Addendence.png"
-                        alt="Attendance Dashboard">
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        HR & Productivity
-                    </div>
-
-
-                    <h3>
-                        Attendance Dashboard
-                    </h3>
-
-
-                    <p>
-
-                        Attendance,
-                        leave patterns,
-                        shifts, overtime and
-                        workforce monitoring.
-
-                    </p>
-
-
-                    <div class="technology">
-
-                        <span>Excel</span>
-                        <span>VBA</span>
-                        <span>Automation</span>
-
-                    </div>
-
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
-
-                        View GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <article
-                class="project"
-                data-category="hr">
-
-
-                <div class="project-image">
-
-                    <img
-                        src="assets/projects/Productivity Dashboard.png"
-                        alt="Productivity Dashboard">
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        HR & Productivity
-                    </div>
-
-
-                    <h3>
-                        Productivity Dashboard
-                    </h3>
-
-
-                    <p>
-
-                        Employee output,
-                        task allocation,
-                        productivity and
-                        operational efficiency.
-
-                    </p>
-
-
-                    <div class="technology">
-
-                        <span>Excel</span>
-                        <span>VBA</span>
-                        <span>MIS</span>
-
-                    </div>
-
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
-
-                        View GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =================================================
-                 AUTOMATION
-            ================================================== -->
-
-
-            <article
-                class="project"
-                data-category="automation">
-
-
-                <div
-                    class="project-image"
-                    style="
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        font-size:3rem;
-                        font-weight:800;
-                        color:#48c6ff;
-                    "
-                >
-
-                    VBA
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        Automation
-                    </div>
-
-
-                    <h3>
-                        Mail Merge Automation
-                    </h3>
-
-
-                    <p>
-
-                        Excel-to-document automation
-                        for bulk offer-letter generation
-                        and operational workflows.
-
-                    </p>
-
-
-                    <div class="technology">
-
-                        <span>Excel</span>
-                        <span>VBA</span>
-                        <span>Mail Merge</span>
-
-                    </div>
-
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/nithishibops"
-                        target="_blank">
-
-                        View GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -4166,171 +3479,174 @@
 
 <section>
 
-    <div class="container">
+<div class="container">
 
+<div class="section-head">
 
-        <div class="section-head">
+<div class="section-label">
+Featured Case Study
+</div>
 
-            <div class="section-label">
-                Featured Case Study
-            </div>
+<h2 class="section-title">
 
-            <h2 class="section-title">
+Corporate Finance,
+Budget & Intelligence
 
-                Corporate Finance,
-                Budget & Intelligence
+</h2>
 
-            </h2>
+</div>
 
-        </div>
 
+<div class="case-study">
 
-        <div class="case-study">
 
+<div>
 
-            <div>
+<div class="section-label">
+Power BI Case Study
+</div>
 
-                <div class="section-label">
-                    Power BI Case Study
-                </div>
+<h3>
+From financial data
+to executive decision support
+</h3>
 
+<p>
 
-                <h3>
-                    From financial data
-                    to executive decision support
-                </h3>
+A four-page Power BI solution
+designed around Executive Overview,
+Revenue & Profit Intelligence,
+Cost & Budget Control and
+Business Drivers.
 
+The model uses a star schema
+connecting Date, Department,
+Manager and Region dimensions
+to a financial fact ledger.
 
-                <p>
+</p>
 
-                    A four-page Power BI solution
-                    designed around Executive Overview,
-                    Revenue & Profit Intelligence,
-                    Cost & Budget Control and
-                    Business Drivers.
 
-                    The model uses a star schema
-                    connecting Date, Department,
-                    Manager and Region dimensions
-                    to a financial fact ledger.
+<div class="case-points">
 
-                </p>
+<div>
 
+<strong>Business Problem:</strong>
+fragmented visibility into revenue,
+budget variance and departmental performance.
 
-                <div class="case-points">
+</div>
 
-                    <div>
-                        <strong>Business Problem:</strong>
-                        fragmented visibility into revenue,
-                        budget variance and departmental performance.
-                    </div>
 
+<div>
 
-                    <div>
-                        <strong>Solution:</strong>
-                        executive KPI layer with DAX,
-                        variance analysis and time intelligence.
-                    </div>
+<strong>Solution:</strong>
+executive KPI layer with DAX,
+variance analysis and time intelligence.
 
+</div>
 
-                    <div>
-                        <strong>Tools:</strong>
-                        Power BI, DAX, Excel and
-                        star-schema modelling.
-                    </div>
 
-                </div>
+<div>
 
-            </div>
+<strong>Tools:</strong>
+Power BI, DAX, Excel and
+star-schema modelling.
 
+</div>
 
+</div>
 
-            <div class="kpi-grid">
+</div>
 
 
-                <div class="kpi">
 
-                    <strong>
-                        AED 5.4bn
-                    </strong>
+<div class="kpi-grid">
 
-                    <span>
-                        Total Revenue
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+AED 5.4bn
+</strong>
 
-                <div class="kpi">
+<span>
+Total Revenue
+</span>
 
-                    <strong>
-                        AED 1.3bn
-                    </strong>
+</div>
 
-                    <span>
-                        Total Profit
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+AED 1.3bn
+</strong>
 
-                <div class="kpi">
+<span>
+Total Profit
+</span>
 
-                    <strong>
-                        90.31%
-                    </strong>
+</div>
 
-                    <span>
-                        Budget Utilization
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+90.31%
+</strong>
 
-                <div class="kpi">
+<span>
+Budget Utilization
+</span>
 
-                    <strong>
-                        10.03%
-                    </strong>
+</div>
 
-                    <span>
-                        ROI
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+10.03%
+</strong>
 
-                <div class="kpi">
+<span>
+ROI
+</span>
 
-                    <strong>
-                        59.23%
-                    </strong>
+</div>
 
-                    <span>
-                        YoY Revenue Growth
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+59.23%
+</strong>
 
-                <div class="kpi">
+<span>
+YoY Revenue Growth
+</span>
 
-                    <strong>
-                        20,000
-                    </strong>
+</div>
 
-                    <span>
-                        Dataset Rows
-                    </span>
 
-                </div>
+<div class="kpi">
 
+<strong>
+20,000
+</strong>
 
-            </div>
+<span>
+Dataset Rows
+</span>
 
-        </div>
+</div>
 
-    </div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -4342,130 +3658,125 @@
 
 <section>
 
-    <div class="container">
+<div class="container">
+
+<div class="two-column">
 
 
-        <div class="two-column">
+<div class="info-card">
 
+<h3>
+Education & Certification
+</h3>
 
-            <div class="info-card">
+<p>
 
-                <h3>
-                    Education & Certification
-                </h3>
+<strong>
+Bachelor of Commerce –
+Computer Applications
+</strong>
 
+</p>
 
-                <p>
-                    <strong>
-                        Bachelor of Commerce –
-                        Computer Applications
-                    </strong>
-                </p>
+<p>
+Alagappa University /
+Syed Ammal Arts & Science College
+</p>
 
+<p>
+2020 – 2023
+•
+79.01%
+</p>
 
-                <p>
-                    Alagappa University /
-                    Syed Ammal Arts & Science College
-                </p>
+<br>
 
+<p>
 
-                <p>
-                    2020 – 2023
-                    •
-                    79.01%
-                </p>
+<strong>
+Certified Investment Banking Professional
+</strong>
 
+</p>
 
-                <br>
+<p>
+Imarticus Learning
+•
+2025
+</p>
 
+<p>
 
-                <p>
-                    <strong>
-                        Certified Investment Banking Professional
-                    </strong>
-                </p>
+Securities & Derivatives
+•
+Trade Life Cycle
+•
+AML/KYC
+•
+Settlement & Reconciliation
+•
+Asset Management
+•
+Risk Management
 
+</p>
 
-                <p>
-                    Imarticus Learning
-                    •
-                    2025
-                </p>
-
-
-                <p>
-
-                    Securities & Derivatives
-                    •
-                    Trade Life Cycle
-                    •
-                    AML/KYC
-                    •
-                    Settlement & Reconciliation
-                    •
-                    Asset Management
-                    •
-                    Risk Management
-
-                </p>
-
-            </div>
+</div>
 
 
 
-            <div class="info-card">
+<div class="info-card">
 
-                <h3>
-                    Professional Focus
-                </h3>
+<h3>
+Professional Focus
+</h3>
+
+<ul>
+
+<li>
+Investment Banking Operations
+</li>
+
+<li>
+Capital Markets Operations
+</li>
+
+<li>
+Securities / RTA Operations
+</li>
+
+<li>
+Repository Operations
+</li>
+
+<li>
+Banking Alliances
+</li>
+
+<li>
+FinTech & Payment Operations
+</li>
+
+<li>
+Merchant Onboarding
+</li>
+
+<li>
+Business Intelligence
+</li>
+
+<li>
+Process Automation
+</li>
+
+</ul>
+
+</div>
 
 
-                <ul>
+</div>
 
-                    <li>
-                        Investment Banking Operations
-                    </li>
-
-                    <li>
-                        Capital Markets Operations
-                    </li>
-
-                    <li>
-                        Securities / RTA Operations
-                    </li>
-
-                    <li>
-                        Repository Operations
-                    </li>
-
-                    <li>
-                        Banking Alliances
-                    </li>
-
-                    <li>
-                        FinTech & Payment Operations
-                    </li>
-
-                    <li>
-                        Merchant Onboarding
-                    </li>
-
-                    <li>
-                        Business Intelligence
-                    </li>
-
-                    <li>
-                        Process Automation
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -4477,124 +3788,113 @@
 
 <section id="contact">
 
-    <div class="container">
+<div class="container">
+
+<div class="contact-grid">
 
 
-        <div class="contact-grid">
+<div class="contact-card">
+
+<div class="section-label">
+Let's Connect
+</div>
+
+<h3>
+
+Open to banking,
+securities and FinTech opportunities.
+
+</h3>
+
+<p>
+
+Interested in roles across
+Investment Banking Operations,
+Capital Markets Operations,
+Banking Operations,
+Payment Operations,
+Merchant Onboarding,
+KYC/AML and Business Intelligence.
+
+</p>
 
 
-            <div class="contact-card">
+<div class="hero-actions">
 
-                <div class="section-label">
-                    Let's Connect
-                </div>
+<a class="btn btn-primary"
+   href="mailto:nithish.ibops@gmail.com">
 
+Email Me
 
-                <h3>
-
-                    Open to banking,
-                    securities and FinTech opportunities.
-
-                </h3>
+</a>
 
 
-                <p>
+<a class="btn"
+   href="assets/Resume.pdf"
+   target="_blank">
 
-                    Interested in roles across
-                    Investment Banking Operations,
-                    Capital Markets Operations,
-                    Banking Operations,
-                    Payment Operations,
-                    Merchant Onboarding,
-                    KYC/AML and Business Intelligence.
+Download Resume
 
-                </p>
+</a>
 
+</div>
 
-                <div class="hero-actions">
-
-
-                    <a
-                        class="btn btn-primary"
-                        href="mailto:nithish.ibops@gmail.com">
-
-                        Email Me
-
-                    </a>
-
-
-                    <a
-                        class="btn"
-                        href="assets/Resume.pdf"
-                        target="_blank">
-
-                        Download Resume
-
-                    </a>
-
-                </div>
-
-            </div>
+</div>
 
 
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <h3>
-                    Contact
-                </h3>
-
-
-                <div class="contact-links">
+<h3>
+Contact
+</h3>
 
 
-                    <a
-                        href="mailto:nithish.ibops@gmail.com">
-
-                        ✉
-                        nithish.ibops@gmail.com
-
-                    </a>
+<div class="contact-links">
 
 
-                    <a
-                        href="tel:+971541643097">
+<a href="mailto:nithish.ibops@gmail.com">
 
-                        ☎
-                        +971 54 164 3097
+✉
+nithish.ibops@gmail.com
 
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
-                        target="_blank">
-
-                        LinkedIn Profile
-
-                    </a>
+</a>
 
 
-                    <a
-                        href="https://github.com/nithishibops"
-                        target="_blank">
+<a href="tel:+971541643097">
 
-                        GitHub Profile
+☎
++971 54 164 3097
 
-                    </a>
-
-
-                </div>
-
-            </div>
+</a>
 
 
-        </div>
+<a href="https://www.linkedin.com/in/nithish-kumar-s-5a0574338"
+   target="_blank">
 
-    </div>
+LinkedIn Profile
+
+</a>
+
+
+<a href="https://github.com/nithishibops"
+   target="_blank">
+
+GitHub Profile
+
+</a>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
-
 
 
 </main>
@@ -4607,27 +3907,27 @@
 
 <footer>
 
-    <div class="container">
+<div class="container">
 
-        © 2026 Nithish Kumar S
+© 2026 Nithish Kumar S
 
-        •
+•
 
-        Investment Banking Operations
+Investment Banking Operations
 
-        •
+•
 
-        Capital Markets
+Capital Markets
 
-        •
+•
 
-        Banking & FinTech
+Banking & FinTech
 
-        •
+•
 
-        Business Intelligence
+Business Intelligence
 
-    </div>
+</div>
 
 </footer>
 
@@ -4637,25 +3937,22 @@
      IMAGE MODAL
 ===================================================== -->
 
-<div
-    class="modal"
-    id="imageModal"
-    aria-hidden="true">
+<div class="modal"
+     id="imageModal"
+     aria-hidden="true">
 
 
-    <button
-        class="close"
+<button class="close"
         id="closeModal">
 
-        ×
+×
 
-    </button>
+</button>
 
 
-    <img
-        id="modalImage"
-        src=""
-        alt="Dashboard Preview">
+<img id="modalImage"
+     src=""
+     alt="Dashboard Preview">
 
 </div>
 
@@ -4668,10 +3965,9 @@
 <script>
 
 
-/* =====================================================
+/* ==========================================
    PROJECT FILTER
-===================================================== */
-
+========================================== */
 
 const filterButtons =
     document.querySelectorAll(".filter");
@@ -4683,9 +3979,7 @@ const projects =
 
 filterButtons.forEach(button => {
 
-
     button.addEventListener("click", () => {
-
 
         filterButtons.forEach(btn => {
 
@@ -4703,7 +3997,6 @@ filterButtons.forEach(button => {
 
         projects.forEach(project => {
 
-
             if (
                 filter === "all" ||
                 project.dataset.category === filter
@@ -4711,9 +4004,7 @@ filterButtons.forEach(button => {
 
                 project.classList.remove("hidden");
 
-            }
-
-            else {
+            } else {
 
                 project.classList.add("hidden");
 
@@ -4721,17 +4012,15 @@ filterButtons.forEach(button => {
 
         });
 
-
     });
 
 });
 
 
 
-/* =====================================================
+/* ==========================================
    IMAGE LIGHTBOX
-===================================================== */
-
+========================================== */
 
 const modal =
     document.getElementById("imageModal");
@@ -4753,9 +4042,7 @@ const dashboardImages =
 
 dashboardImages.forEach(image => {
 
-
     image.addEventListener("click", () => {
-
 
         modalImage.src =
             image.src;
@@ -4773,15 +4060,12 @@ dashboardImages.forEach(image => {
             "false"
         );
 
-
     });
 
 });
 
 
-
 function hideModal() {
-
 
     modal.classList.remove("open");
 
@@ -4797,18 +4081,15 @@ function hideModal() {
 }
 
 
-
 closeModal.addEventListener(
     "click",
     hideModal
 );
 
 
-
 modal.addEventListener(
     "click",
     event => {
-
 
         if (
             event.target === modal
@@ -4818,16 +4099,13 @@ modal.addEventListener(
 
         }
 
-
     }
 );
-
 
 
 document.addEventListener(
     "keydown",
     event => {
-
 
         if (
             event.key === "Escape"
@@ -4837,13 +4115,11 @@ document.addEventListener(
 
         }
 
-
     }
 );
 
 
 </script>
-
 
 
 </body>
