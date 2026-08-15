@@ -1,13 +1,11 @@
 /* =========================================================
    CAPITAL MARKET SECTION
-   MATCHES EXISTING PREMIUM DARK + GOLD THEME
+   MATCHES TECHNICAL & PROFESSIONAL SKILLS DESIGN
 ========================================================= */
 
 .capital-market-section {
   background: #0b0b0d !important;
   color: #f4efe5;
-  position: relative;
-  overflow: hidden;
 }
 
 
@@ -21,92 +19,106 @@
   color: #f4efe5 !important;
 }
 
-.capital-market-section .section-heading p:last-child {
+.capital-market-section .section-heading > p {
   color: #a99d8c !important;
 }
 
 
 /* =========================================================
-   75 / 45 / 30 CARDS
+   CAPITAL MARKET CARDS
 ========================================================= */
 
 .capital-market-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 22px;
   margin-top: 45px;
 }
 
 
+/* Card */
+
 .capital-market-card {
+  position: relative;
+
   background: #111114 !important;
 
-  border: 1px solid rgba(216, 177, 92, 0.20) !important;
+  border: 1px solid #2b2b30 !important;
 
   border-radius: 18px;
 
-  padding: 42px 30px;
+  padding: 38px 32px;
 
-  text-align: center;
+  min-height: 250px;
 
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.35);
+  text-align: left;
+
+  box-shadow: none;
 
   transition:
     transform 0.3s ease,
     border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.3s ease;
 }
 
+
+/* Card hover */
 
 .capital-market-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-5px);
 
-  border-color: rgba(216, 177, 92, 0.55) !important;
+  background: #151518 !important;
 
-  box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.45);
+  border-color: rgba(216, 177, 92, 0.45) !important;
 }
 
 
-/* Numbers */
+/* =========================================================
+   NUMBER
+========================================================= */
 
 .capital-market-number {
-  color: #d8b15c !important;
-
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 64px;
+  font-size: 58px;
 
   line-height: 1;
 
   font-weight: 700;
 
-  margin-bottom: 18px;
+  color: #d8b15c !important;
+
+  margin-bottom: 22px;
 }
 
 
-/* Titles */
+/* =========================================================
+   CARD TITLE
+========================================================= */
 
 .capital-market-card h3 {
   color: #f4efe5 !important;
 
-  font-size: 21px;
+  font-size: 20px;
 
-  font-weight: 600;
+  line-height: 1.45;
+
+  font-weight: 700;
 
   margin: 0 0 14px;
 }
 
 
-/* Description */
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
 
 .capital-market-card p {
-  color: #a99d8c !important;
+  color: #b3a797 !important;
 
-  font-size: 14px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.7;
 
   margin: 0;
 }
@@ -117,28 +129,25 @@
 ========================================================= */
 
 .capital-market-summary {
-  margin-top: 30px;
+  margin-top: 22px;
 
   padding: 24px 30px;
 
   display: flex;
 
-  justify-content: center;
-
   align-items: center;
 
-  gap: 38px;
+  justify-content: center;
+
+  gap: 35px;
 
   flex-wrap: wrap;
 
   background: #111114 !important;
 
-  border: 1px solid rgba(216, 177, 92, 0.20) !important;
+  border: 1px solid #2b2b30 !important;
 
   border-radius: 16px;
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.30);
 }
 
 
@@ -152,11 +161,11 @@
 
 
 .summary-item strong {
-  color: #d8b15c !important;
-
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 30px;
+  color: #d8b15c !important;
+
+  font-size: 28px;
 
   font-weight: 700;
 }
@@ -172,14 +181,14 @@
 .summary-divider {
   width: 1px;
 
-  height: 32px;
+  height: 30px;
 
-  background: rgba(216, 177, 92, 0.30) !important;
+  background: #3a3732 !important;
 }
 
 
 /* =========================================================
-   OPERATIONS
+   OPERATIONS CARDS
 ========================================================= */
 
 .capital-market-operations {
@@ -187,9 +196,9 @@
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 18px;
+  gap: 22px;
 
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 
@@ -198,67 +207,77 @@
 
   align-items: flex-start;
 
-  gap: 15px;
+  gap: 16px;
 
-  padding: 22px;
+  padding: 25px;
 
   background: #111114 !important;
 
-  border: 1px solid rgba(216, 177, 92, 0.12) !important;
+  border: 1px solid #2b2b30 !important;
 
-  border-radius: 14px;
+  border-radius: 16px;
 
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
 .operation-item:hover {
-  border-color: rgba(216, 177, 92, 0.35) !important;
+  transform: translateY(-4px);
 
-  transform: translateY(-3px);
+  border-color: rgba(216, 177, 92, 0.40) !important;
 }
 
 
 .operation-icon {
   flex-shrink: 0;
 
-  width: 34px;
-  height: 34px;
+  width: 38px;
+
+  height: 38px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 10px;
 
-  background: rgba(216, 177, 92, 0.08) !important;
+  background: #24221f !important;
 
-  border: 1px solid rgba(216, 177, 92, 0.35) !important;
+  border: 1px solid #69552e !important;
 
   color: #d8b15c !important;
 
+  font-family: "Cormorant Garamond", serif;
+
   font-weight: 700;
+
+  font-size: 16px;
 }
 
 
 .operation-item h4 {
   color: #f4efe5 !important;
 
-  margin: 0 0 6px;
+  font-size: 17px;
 
-  font-size: 16px;
+  margin: 0 0 7px;
+
+  font-weight: 700;
 }
 
 
 .operation-item p {
-  color: #918879 !important;
+  color: #a99d8c !important;
 
-  margin: 0;
-
-  font-size: 13px;
+  font-size: 14px;
 
   line-height: 1.7;
+
+  margin: 0;
 }
 
 
@@ -269,7 +288,7 @@
 @media (max-width: 900px) {
 
   .capital-market-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .capital-market-card:last-child {
@@ -293,20 +312,30 @@
     grid-column: auto;
   }
 
+  .capital-market-card {
+    min-height: auto;
+
+    padding: 30px 25px;
+  }
+
   .capital-market-number {
-    font-size: 55px;
+    font-size: 52px;
   }
 
   .capital-market-summary {
     flex-direction: column;
 
-    gap: 18px;
+    gap: 15px;
   }
 
   .summary-divider {
     width: 45px;
 
     height: 1px;
+  }
+
+  .capital-market-operations {
+    grid-template-columns: 1fr;
   }
 
 }
