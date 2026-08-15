@@ -1,15 +1,19 @@
 /* =========================================================
-   CAPITAL MARKET SECTION
-   MATCHES TECHNICAL & PROFESSIONAL SKILLS DESIGN
+   CAPITAL MARKET OPERATIONS
+   PREMIUM DARK / GOLD THEME
+   MATCHES TECHNICAL & PROFESSIONAL SKILLS
 ========================================================= */
 
 .capital-market-section {
   background: #0b0b0d !important;
   color: #f4efe5;
+  position: relative;
 }
 
 
-/* Section heading */
+/* =========================================================
+   SECTION HEADING
+========================================================= */
 
 .capital-market-section .section-label {
   color: #d8b15c !important;
@@ -19,7 +23,7 @@
   color: #f4efe5 !important;
 }
 
-.capital-market-section .section-heading > p {
+.capital-market-section .section-heading > p:last-child {
   color: #a99d8c !important;
 }
 
@@ -35,8 +39,6 @@
   margin-top: 45px;
 }
 
-
-/* Card */
 
 .capital-market-card {
   position: relative;
@@ -61,8 +63,6 @@
     background 0.3s ease;
 }
 
-
-/* Card hover */
 
 .capital-market-card:hover {
   transform: translateY(-5px);
@@ -219,12 +219,15 @@
 
   transition:
     transform 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
 
 .operation-item:hover {
   transform: translateY(-4px);
+
+  background: #151518 !important;
 
   border-color: rgba(216, 177, 92, 0.40) !important;
 }
@@ -255,7 +258,7 @@
 
   font-weight: 700;
 
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -278,6 +281,41 @@
   line-height: 1.7;
 
   margin: 0;
+}
+
+
+/* =========================================================
+   ABOUT STAT CARDS
+   MAKE THE NEW 75 / 45 / 30 CARDS MATCH YOUR SITE
+========================================================= */
+
+.about-stats .stat-card {
+  background: #111114 !important;
+
+  border-color: #2b2b30 !important;
+}
+
+
+.about-stats .stat-number {
+  color: #d8b15c !important;
+}
+
+
+.about-stats .stat-label {
+  color: #a99d8c !important;
+}
+
+
+/* =========================================================
+   CAPITAL MARKET NAVIGATION
+========================================================= */
+
+#navMenu .nav-link[href="#capital-market"] {
+  transition: color 0.25s ease;
+}
+
+#navMenu .nav-link[href="#capital-market"]:hover {
+  color: #d8b15c !important;
 }
 
 
