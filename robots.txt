@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nithishibops.github.io/nithishibops-nithish-portfolio/sitemap.xml
