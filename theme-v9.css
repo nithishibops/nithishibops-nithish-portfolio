@@ -1,0 +1,332 @@
+
+/* =========================================================
+   V9 COMPLETE COLOR REBUILD
+   One palette system controls the entire site.
+   NIGHT: Aubergine + Copper + Teal
+   MORNING: Warm Ivory + Terracotta + Sage
+   ========================================================= */
+
+:root{
+  --c-page:#151019;
+  --c-page-2:#1c1320;
+  --c-surface:#211624;
+  --c-surface-2:#2a1a2d;
+  --c-surface-3:#321f34;
+  --c-text:#fff9f4;
+  --c-heading:#fffdf9;
+  --c-muted:#c8b8c4;
+  --c-muted-2:#a998a5;
+  --c-border:rgba(255,255,255,.095);
+  --c-border-strong:rgba(255,255,255,.16);
+  --c-primary:#e48a68;
+  --c-primary-2:#f1a17f;
+  --c-secondary:#5dc6b0;
+  --c-secondary-2:#9fe4d4;
+  --c-accent:#f0c36e;
+  --c-accent-2:#ffe0a2;
+  --c-shadow:rgba(6,2,8,.28);
+  --c-nav:rgba(21,16,25,.90);
+  --c-input:#190f1c;
+  --c-success:#72d3a4;
+}
+
+html[data-theme="morning"],
+html.theme-morning,
+body[data-theme="morning"],
+body.theme-morning{
+  --c-page:#f3ece3;
+  --c-page-2:#ece1d5;
+  --c-surface:#fffaf4;
+  --c-surface-2:#f6ede4;
+  --c-surface-3:#eee0d2;
+  --c-text:#2d261f;
+  --c-heading:#251f1a;
+  --c-muted:#6e6258;
+  --c-muted-2:#8b7c70;
+  --c-border:rgba(54,42,32,.11);
+  --c-border-strong:rgba(54,42,32,.18);
+  --c-primary:#a94e32;
+  --c-primary-2:#c76443;
+  --c-secondary:#2f7869;
+  --c-secondary-2:#4d9585;
+  --c-accent:#b7842e;
+  --c-accent-2:#d0a34d;
+  --c-shadow:rgba(79,58,38,.11);
+  --c-nav:rgba(255,250,244,.93);
+  --c-input:#fffdf9;
+  --c-success:#2f8064;
+}
+
+/* hard reset of previous palette */
+html,body{
+  background:var(--c-page) !important;
+  color:var(--c-text) !important;
+}
+body{
+  background:
+    radial-gradient(circle at 12% 6%,color-mix(in srgb,var(--c-primary) 13%,transparent),transparent 26%),
+    radial-gradient(circle at 90% 8%,color-mix(in srgb,var(--c-secondary) 11%,transparent),transparent 28%),
+    linear-gradient(180deg,var(--c-page),var(--c-page-2)) !important;
+}
+main>.section,
+.section-muted,
+.projects-section,
+.contact-section,
+.value-section,
+.initiative-section{
+  background:transparent !important;
+}
+main>.section::before{
+  display:none !important;
+}
+main>.section::after{
+  background:linear-gradient(180deg,color-mix(in srgb,var(--c-page) 22%,transparent),color-mix(in srgb,var(--c-page-2) 30%,transparent)) !important;
+}
+
+/* navbar */
+.navbar,.site-header{
+  background:var(--c-nav) !important;
+  border-bottom:1px solid var(--c-border) !important;
+  box-shadow:0 10px 28px var(--c-shadow) !important;
+}
+.brand-mark,.brand-copy strong{color:var(--c-heading) !important}
+.brand-mark em,.brand-copy em{color:var(--c-primary) !important}
+.brand-copy small,.nav-link{color:var(--c-muted) !important}
+.nav-link:hover,.nav-link.active{color:var(--c-heading) !important}
+.nav-link::after{background:linear-gradient(90deg,var(--c-primary),var(--c-secondary)) !important}
+.nav-cta{
+  background:linear-gradient(135deg,var(--c-primary-2),var(--c-primary)) !important;
+  color:#1b1012 !important;
+  border:0 !important;
+  box-shadow:0 12px 28px color-mix(in srgb,var(--c-primary) 20%,transparent) !important;
+}
+html[data-theme="morning"] .nav-cta,
+html.theme-morning .nav-cta{
+  color:#fffaf5 !important;
+}
+
+/* theme switch */
+.time-theme-switch{
+  background:color-mix(in srgb,var(--c-surface) 92%,transparent) !important;
+  border:1px solid var(--c-border) !important;
+  box-shadow:0 18px 36px var(--c-shadow) !important;
+}
+.time-theme-label,.theme-choice{color:var(--c-muted) !important}
+.theme-choice:hover{color:var(--c-heading) !important;background:color-mix(in srgb,var(--c-surface-2) 76%,transparent) !important}
+.theme-choice.active{
+  color:var(--c-heading) !important;
+  border-color:color-mix(in srgb,var(--c-primary) 34%,transparent) !important;
+  background:linear-gradient(145deg,color-mix(in srgb,var(--c-primary) 18%,var(--c-surface)),color-mix(in srgb,var(--c-secondary) 10%,var(--c-surface))) !important;
+}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 78% 20%,color-mix(in srgb,var(--c-secondary) 11%,transparent),transparent 28%),
+    radial-gradient(circle at 20% 70%,color-mix(in srgb,var(--c-primary) 10%,transparent),transparent 30%),
+    linear-gradient(118deg,var(--c-page) 0%,var(--c-page-2) 64%,var(--c-surface) 100%) !important;
+  color:var(--c-text) !important;
+}
+.hero::before{
+  background:linear-gradient(90deg,color-mix(in srgb,var(--c-page) 97%,transparent) 0%,color-mix(in srgb,var(--c-page) 88%,transparent) 48%,color-mix(in srgb,var(--c-page) 55%,transparent) 78%,color-mix(in srgb,var(--c-page) 74%,transparent) 100%) !important;
+}
+.hero::after{background:linear-gradient(180deg,transparent,var(--c-page)) !important}
+.hero-skyline{
+  opacity:.24 !important;
+  filter:saturate(.45) contrast(1.04) brightness(.72) !important;
+}
+.hero h1,.hero h2,.section-heading h2,.contact-copy h2{color:var(--c-heading) !important}
+.hero h3{color:var(--c-muted) !important}
+.hero h3 span{color:var(--c-accent) !important}
+.hero-description,.availability-note{color:var(--c-muted) !important}
+.hero .eyebrow,.section-label,.mini-label{
+  color:var(--c-accent-2) !important;
+  background:color-mix(in srgb,var(--c-surface) 74%,transparent) !important;
+  border:1px solid color-mix(in srgb,var(--c-accent) 22%,transparent) !important;
+}
+html[data-theme="morning"] .hero .eyebrow,
+html[data-theme="morning"] .section-label,
+html[data-theme="morning"] .mini-label,
+html.theme-morning .hero .eyebrow,
+html.theme-morning .section-label,
+html.theme-morning .mini-label{
+  color:var(--c-accent) !important;
+}
+.hero-trust span,.availability-note{
+  background:color-mix(in srgb,var(--c-surface) 74%,transparent) !important;
+  border-color:var(--c-border) !important;
+}
+.hero-trust span{color:var(--c-muted) !important}
+.hero-trust svg{color:var(--c-secondary) !important}
+.status-dot{background:var(--c-success) !important}
+
+/* buttons */
+.btn-primary{
+  background:linear-gradient(135deg,var(--c-primary-2),var(--c-primary)) !important;
+  color:#1c1110 !important;
+  border-color:transparent !important;
+  box-shadow:0 12px 28px color-mix(in srgb,var(--c-primary) 18%,transparent) !important;
+}
+html[data-theme="morning"] .btn-primary,
+html.theme-morning .btn-primary{color:#fffaf6 !important}
+.btn-secondary{
+  background:color-mix(in srgb,var(--c-surface) 82%,transparent) !important;
+  color:var(--c-heading) !important;
+  border-color:var(--c-border-strong) !important;
+}
+.btn-secondary:hover{
+  background:color-mix(in srgb,var(--c-primary) 9%,var(--c-surface)) !important;
+  border-color:color-mix(in srgb,var(--c-primary) 34%,transparent) !important;
+}
+
+/* portrait: no theme bug */
+.profile-photo-wrap{
+  background:var(--c-surface-2) !important;
+  border:1px solid color-mix(in srgb,var(--c-primary) 28%,transparent) !important;
+  box-shadow:0 22px 48px var(--c-shadow) !important;
+}
+.profile-photo{filter:brightness(1.05) contrast(1.03) saturate(.98) !important}
+.profile-caption{
+  background:var(--c-surface) !important;
+  border:1px solid var(--c-border) !important;
+  box-shadow:0 14px 30px var(--c-shadow) !important;
+  color:var(--c-text) !important;
+}
+.profile-caption small{color:var(--c-accent) !important;-webkit-text-fill-color:var(--c-accent) !important}
+.profile-caption strong{color:var(--c-heading) !important;-webkit-text-fill-color:var(--c-heading) !important}
+.profile-caption span{color:var(--c-muted) !important;-webkit-text-fill-color:var(--c-muted) !important}
+
+/* all major cards */
+.value-copy,.value-story,.stats-strip>div,.timeline-item,.skill-group,.featured-card,.project-card,
+.workflow-step,.resume-summary,.credential-card,.initiative-card,.contact-form,
+.contact-mini-grid>a,.contact-mini-grid>div,.project-slider-shell,.project-dialog{
+  background:linear-gradient(145deg,var(--c-surface),var(--c-surface-2)) !important;
+  border:1px solid var(--c-border) !important;
+  box-shadow:0 18px 42px var(--c-shadow),inset 0 1px rgba(255,255,255,.025) !important;
+}
+.value-copy:hover,.stats-strip>div:hover,.timeline-item:hover,.skill-group:hover,.featured-card:hover,.project-card:hover,
+.workflow-step:hover,.credential-card:hover{
+  border-color:color-mix(in srgb,var(--c-primary) 30%,transparent) !important;
+  box-shadow:0 22px 52px var(--c-shadow),0 0 30px color-mix(in srgb,var(--c-secondary) 5%,transparent) !important;
+}
+
+/* stats */
+.stats-strip strong{color:var(--c-heading) !important;-webkit-text-fill-color:var(--c-heading) !important}
+.stats-strip span{color:var(--c-muted) !important;-webkit-text-fill-color:var(--c-muted) !important}
+.stats-strip>div:nth-child(odd) svg{color:var(--c-primary-2) !important;stroke:var(--c-primary-2) !important}
+.stats-strip>div:nth-child(even) svg{color:var(--c-secondary) !important;stroke:var(--c-secondary) !important}
+
+/* common text */
+.section-heading p,.value-story p,.timeline-item li,.skill-group p,.project-analysis,.project-card p,
+.workflow-step p,.resume-summary p,.credential-card p,.initiative-card p,.contact-copy p,.form-actions small{
+  color:var(--c-muted) !important;
+}
+.timeline-item h3,.skill-group h3,.featured-body h3,.project-card h3,.workflow-step h3,.credential-card h4,
+.resume-summary h3,.initiative-card h2,.form-head h3{
+  color:var(--c-heading) !important;
+}
+.timeline-item h4,.project-identity strong,.contact-mini-grid strong{color:var(--c-text) !important}
+.timeline-topline,.project-status,.project-actions.compact a,.text-btn{color:var(--c-secondary-2) !important}
+.project-number{color:color-mix(in srgb,var(--c-text) 22%,transparent) !important}
+
+/* project cards */
+.project-identity{
+  background:linear-gradient(180deg,color-mix(in srgb,var(--c-primary) 8%,var(--c-surface)),var(--c-surface)) !important;
+  border-bottom:1px solid var(--c-border) !important;
+}
+.project-icon,.project-card-icon{
+  background:color-mix(in srgb,var(--c-secondary) 9%,var(--c-surface)) !important;
+  border-color:color-mix(in srgb,var(--c-secondary) 22%,transparent) !important;
+  color:var(--c-secondary-2) !important;
+}
+[data-accent="gold"] .project-icon,[data-accent="gold"] .project-card-icon{
+  background:color-mix(in srgb,var(--c-primary) 10%,var(--c-surface)) !important;
+  border-color:color-mix(in srgb,var(--c-primary) 24%,transparent) !important;
+  color:var(--c-primary-2) !important;
+}
+.project-tags span,.chip-list span,.resume-tags span{
+  color:var(--c-muted) !important;
+  background:color-mix(in srgb,var(--c-surface-3) 84%,transparent) !important;
+  border-color:var(--c-border) !important;
+}
+.featured-card[data-spotlight="true"],.project-card[data-spotlight="true"]{
+  border-color:color-mix(in srgb,var(--c-accent) 38%,transparent) !important;
+  box-shadow:0 22px 52px var(--c-shadow),0 0 0 1px color-mix(in srgb,var(--c-accent) 8%,transparent) inset !important;
+}
+.spotlight-badge{
+  background:linear-gradient(135deg,var(--c-accent-2),var(--c-accent)) !important;
+  color:#2b2112 !important;
+}
+.slider-controls button{
+  background:var(--c-surface) !important;
+  color:var(--c-text) !important;
+  border-color:var(--c-border) !important;
+}
+.slider-controls button:hover{background:var(--c-surface-2) !important;border-color:color-mix(in srgb,var(--c-primary) 28%,transparent) !important}
+.slider-count,.project-slider-toolbar>span{color:var(--c-muted-2) !important}
+.slider-dots button{background:color-mix(in srgb,var(--c-muted) 24%,transparent) !important}
+.slider-dots button.active{background:linear-gradient(90deg,var(--c-primary),var(--c-secondary)) !important}
+
+/* credentials/certificates */
+.credential-icon{
+  background:color-mix(in srgb,var(--c-accent) 10%,var(--c-surface)) !important;
+  border:1px solid color-mix(in srgb,var(--c-accent) 22%,transparent) !important;
+  color:var(--c-accent) !important;
+}
+.credential-icon svg{color:var(--c-accent) !important;stroke:var(--c-accent) !important}
+.certificate-card a{color:var(--c-secondary-2) !important}
+
+/* contact/form */
+.contact-mini-grid svg{color:var(--c-secondary) !important}
+.contact-mini-grid span{color:var(--c-muted-2) !important}
+.contact-form label>span{color:var(--c-muted-2) !important}
+.contact-form input,.contact-form textarea{
+  background:var(--c-input) !important;
+  border:1px solid var(--c-border) !important;
+  color:var(--c-text) !important;
+}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--c-muted-2) !important}
+.contact-form input:focus,.contact-form textarea:focus{
+  border-color:color-mix(in srgb,var(--c-secondary) 44%,transparent) !important;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--c-secondary) 10%,transparent) !important;
+}
+.form-status{color:var(--c-success) !important}
+
+/* footer/dialog */
+footer{
+  background:var(--c-page-2) !important;
+  border-top:1px solid var(--c-border) !important;
+  color:var(--c-muted) !important;
+}
+.project-dialog{color:var(--c-text) !important}
+.project-dialog h2,.project-dialog h3{color:var(--c-heading) !important}
+.project-dialog p,.project-dialog li{color:var(--c-muted) !important}
+.dialog-close{color:var(--c-text) !important}
+
+/* shine changed to copper/sage instead of gold/blue */
+.scroll-progress i{background:linear-gradient(90deg,var(--c-primary),var(--c-secondary),var(--c-accent)) !important}
+.back-to-top{background:var(--c-surface) !important;border-color:var(--c-border) !important;color:var(--c-heading) !important}
+
+/* morning card text hard guarantee */
+html[data-theme="morning"] .stats-strip strong,
+html[data-theme="morning"] .profile-caption strong,
+html[data-theme="morning"] .section-heading h2,
+html[data-theme="morning"] .timeline-item h3,
+html[data-theme="morning"] .skill-group h3,
+html[data-theme="morning"] .featured-body h3,
+html[data-theme="morning"] .project-card h3,
+html[data-theme="morning"] .workflow-step h3,
+html[data-theme="morning"] .credential-card h4{
+  color:var(--c-heading) !important;
+  -webkit-text-fill-color:var(--c-heading) !important;
+}
+html[data-theme="morning"] .stats-strip span,
+html[data-theme="morning"] .profile-caption span{
+  color:var(--c-muted) !important;
+  -webkit-text-fill-color:var(--c-muted) !important;
+}
+
+/* responsive */
+@media(max-width:760px){
+  .time-theme-switch{background:var(--c-surface) !important}
+}
